@@ -1,2 +1,3 @@
-# revture
-Pseudo-open world RPG adventure game
+<h1 align="center">REVTURE</h1>
+
+The name comes from revenge and adventure
