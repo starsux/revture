@@ -1,35 +1,13 @@
 /*:
  * NOTE: Images are stored in the img/system folder.
  *
- * @plugindesc Show a Splash Screen "Made with MV" and/or a Custom Splash Screen before going to main screen.
- * @author Dan "Liquidize" Deptula
+ * @plugindesc Show splashScreen naptora
+ * @author Naptora
  *
- * @help This plugin does not provide plugin commands.
- *
- * @param Show Made With MV
- * @desc Enabled/Disables showing the "Made with MV" splash screen.
- * OFF - false     ON - true
- * Default: ON
- * @default true
- *
- * @param Made with MV Image
- * @desc The image to use when showing "Made with MV"
- * Default: MadeWithMv
- * @default MadeWithMv
- * @require 1
- * @dir img/system/
- * @type file
- *
- * @param Show Custom Splash
- * @desc Enabled/Disables showing the "Made with MV" splash screen.
- * OFF - false     ON - true
- * Default: OFF
- * @default false
- *
- * @param Custom Image
- * @desc The image to use when showing "Made with MV"
- * Default: 
- * @default 
+ * @param Logo image
+ * @desc Image to use as splashscreen
+ * Default: naptora_logo
+ * @default naptora_logo
  * @require 1
  * @dir img/system/
  * @type file
@@ -50,58 +28,7 @@
  * @default 160
  *
  */
-/*:ja
- * メモ: イメージはimg／systemフォルダ内に保存されます。
- *
- * @plugindesc メイン画面へ進む前に、"Made with MV"のスプラッシュ画面もしくはカスタマイズされたスプラッシュ画面を表示します。
- * @author Dan "Liquidize" Deptula
- *
- * @help  このプラグインにはプラグインコマンドはありません。
- *
- * @param Show Made With MV
- * @desc "Made with MV"のスプラッシュ画面を表示できる/できないようにします。 
- * OFF - false     ON - true
- * デフォルト: ON
- * @default true
- *
- * @param Made with MV Image
- * @desc "Made with MV"を表示する際に使用する画像
- * デフォルト: MadeWithMv
- * @default MadeWithMv
- * @require 1
- * @dir img/system/
- * @type file
- *
- * @param Show Custom Splash
- * @desc "Made with MV"のスプラッシュ画面を表示できる/できないようにします。 
- * OFF - false     ON - true
- * デフォルト: OFF
- * @default false
- *
- * @param Custom Image
- * @desc "Made with MV"を表示する際に使用する画像
- * デフォルト: 
- * @default 
- * @require 1
- * @dir img/system/
- * @type file
- *
- * @param Fade Out Time
- * @desc フェードアウトに要する時間（フレーム数）
- * デフォルト: 120
- * @default 120
- *
- * @param Fade In Time
- * @desc フェードインに要する時間（フレーム数）
- * デフォルト: 120
- * @default 120
- *
- * @param Wait Time
- * @desc フェードインからフェードアウトまでに要する時間（フレーム数）
- * デフォルト: 160
- * @default 160
- *
- */
+
 var Liquidize = Liquidize || {};
 Liquidize.MadeWithMV = {};
 Liquidize.MadeWithMV.Parameters = PluginManager.parameters('MadeWithMv');
