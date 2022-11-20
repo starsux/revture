@@ -1,21 +1,13 @@
 /*:
- * NOTE: Images are stored in the img/system folder.
  *
- * @plugindesc Show a Splash Screen "Made with MV" and/or a Custom Splash Screen before going to main screen.
- * @author Dan "Liquidize" Deptula
+ * @plugindesc Show a Splash Screen before going to main screen.
+ * @author Naptora
  *
- * @help This plugin does not provide plugin commands.
- *
- * @param Show Made With MV
- * @desc Enabled/Disables showing the "Made with MV" splash screen.
- * OFF - false     ON - true
- * Default: ON
- * @default true
  *
  * @param Splash Image
  * @desc The image to use when showing the splash screen
- * Default: MadeWithMv
- * @default MadeWithMv
+ * Default: Splash
+ * @default Splash
  * @require 1
  * @dir img/system/
  * @type file
@@ -34,18 +26,23 @@
  * @desc The time between fading in and out, in frames.
  * Default: 160
  * @default 160
+ * 
+ * @param Image Factor
+ * @desc Change image size maintaining the aspect ratio
+ * Default 100%
+ * @default 100%
  *
  */
 
-var Liquidize = Liquidize || {};
-Liquidize.MadeWithMV = {};
-Liquidize.MadeWithMV.Parameters = PluginManager.parameters('MadeWithMv');
+var Plg_mang = Plg_mang || {};
+Plg_mang.SplashScreen = {};
+Plg_mang.SplashScreen.Parameters = PluginManager.parameters('SplashScreen');
 
-Liquidize.MadeWithMV.ShowMV = JSON.parse(Liquidize.MadeWithMV.Parameters["Show Made With MV"]);
-Liquidize.MadeWithMV.SplImage = String(Liquidize.MadeWithMV.Parameters["Splash Image"]);
-Liquidize.MadeWithMV.FadeOutTime = Number(Liquidize.MadeWithMV.Parameters["Fade Out Time"]) || 120;
-Liquidize.MadeWithMV.FadeInTime = Number(Liquidize.MadeWithMV.Parameters["Fade In Time"]) || 120;
-Liquidize.MadeWithMV.WaitTime = Number(Liquidize.MadeWithMV.Parameters["Wait Time"]) || 160;
+Plg_mang.SplashScreen.SplImage = String(Plg_mang.SplashScreen.Parameters["Splash Image"]);
+Plg_mang.SplashScreen.FadeOutTime = Number(Plg_mang.SplashScreen.Parameters["Fade Out Time"]) || 120;
+Plg_mang.SplashScreen.FadeInTime = Number(Plg_mang.SplashScreen.Parameters["Fade In Time"]) || 120;
+Plg_mang.SplashScreen.WaitTime = Number(Plg_mang.SplashScreen.Parameters["Wait Time"]) || 160;
+Plg_mang.SplashScreen.ImageFactor = Number.parseInt(Plg_mang.SplashScreen.Parameters['Image Factor']);
 
 
 //-----------------------------------------------------------------------------
@@ -67,14 +64,13 @@ function Scene_Splash() {
     var _Scene_Boot_loadSystemImages = Scene_Boot.prototype.loadSystemImages;
     Scene_Boot.prototype.loadSystemImages = function() {
         _Scene_Boot_loadSystemImages.call(this);
-        if (Liquidize.MadeWithMV.ShowMV) {
-            ImageManager.loadSystem(Liquidize.MadeWithMV.SplImage);
-        }
+        ImageManager.loadSystem(Plg_mang.SplashScreen.SplImage);
+
     };
 
     var _Scene_Boot_start = Scene_Boot.prototype.start;
     Scene_Boot.prototype.start = function() {
-        if (Liquidize.MadeWithMV.ShowMV && !DataManager.isBattleTest() && !DataManager.isEventTest()) {
+        if (!DataManager.isBattleTest() && !DataManager.isEventTest()) {
             SceneManager.goto(Scene_Splash);
         } else {
             _Scene_Boot_start.call(this);
@@ -93,8 +89,8 @@ function Scene_Splash() {
         Scene_Base.prototype.initialize.call(this);
         this._mvSplash = null;
         this._customSplash = null;
-        this._mvWaitTime = Liquidize.MadeWithMV.WaitTime;
-        this._customWaitTime = Liquidize.MadeWithMV.WaitTime;
+        this._mvWaitTime = Plg_mang.SplashScreen.WaitTime;
+        this._customWaitTime = Plg_mang.SplashScreen.WaitTime;
         this._mvFadeOut = false;
         this._mvFadeIn = false;
         this._customFadeOut = false;
@@ -110,26 +106,23 @@ function Scene_Splash() {
         Scene_Base.prototype.start.call(this);
         SceneManager.clearStack();
         if (this._mvSplash != null) {
+            this.resizeSplash(this._mvSplash);
             this.centerSprite(this._mvSplash);
         }
-        if (this._customSplash != null) {
-            this.centerSprite(this._customSplash);
-        }
+
     };
 
     Scene_Splash.prototype.update = function() {
-        if (Liquidize.MadeWithMV.ShowMV) {
-            if (!this._mvFadeIn) {
-                this.startFadeIn(Liquidize.MadeWithMV.FadeInTime, false);
-                this._mvFadeIn = true;
+        if (!this._mvFadeIn) {
+            this.startFadeIn(Plg_mang.SplashScreen.FadeInTime, false);
+            this._mvFadeIn = true;
+        } else {
+            if (this._mvWaitTime > 0 && this._mvFadeOut == false) {
+                this._mvWaitTime--;
             } else {
-                if (this._mvWaitTime > 0 && this._mvFadeOut == false) {
-                    this._mvWaitTime--;
-                } else {
-                    if (this._mvFadeOut == false) {
-                        this._mvFadeOut = true;
-                        this.startFadeOut(Liquidize.MadeWithMV.FadeOutTime, false);
-                    }
+                if (this._mvFadeOut == false) {
+                    this._mvFadeOut = true;
+                    this.startFadeOut(Plg_mang.SplashScreen.FadeOutTime, false);
                 }
             }
         }
@@ -142,17 +135,31 @@ function Scene_Splash() {
     };
 
     Scene_Splash.prototype.createSplashes = function() {
-        if (Liquidize.MadeWithMV.ShowMV) {
-            this._mvSplash = new Sprite(ImageManager.loadSystem(Liquidize.MadeWithMV.SplImage));
-            this.addChild(this._mvSplash);
+        this._mvSplash = new Sprite(ImageManager.loadSystem(Plg_mang.SplashScreen.SplImage));
+
+        // Add to scene            
+        this.addChild(this._mvSplash);
+    };
+
+    Scene_Splash.prototype.resizeSplash = function(sprite) {
+        if(Plg_mang.SplashScreen.ImageFactor != 100){
+
+            var factor = Plg_mang.SplashScreen.ImageFactor/100;
+            
+            // Apply scale
+            sprite.scale.set(factor,factor);
+            
         }
     };
 
     Scene_Splash.prototype.centerSprite = function(sprite) {
+
         sprite.x = Graphics.width / 2;
         sprite.y = Graphics.height / 2;
         sprite.anchor.x = 0.5;
         sprite.anchor.y = 0.5;
+
+        
     };
 
     Scene_Splash.prototype.gotoTitleOrTest = function() {
