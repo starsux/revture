@@ -9,13 +9,6 @@
  * @help This plugin does not provide plugin commands.
  */
 
-/*:ja
- * @plugindesc メニュー画面のレイアウトを変更します。
- * @author Yoji Ojima
- *
- * @help このプラグインには、プラグインコマンドはありません。
- */
-
 (function() {
 
     var _Scene_Menu_create = Scene_Menu.prototype.create;

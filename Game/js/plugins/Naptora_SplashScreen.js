@@ -36,7 +36,7 @@
 
 var Plg_mang = Plg_mang || {};
 Plg_mang.SplashScreen = {};
-Plg_mang.SplashScreen.Parameters = PluginManager.parameters('SplashScreen');
+Plg_mang.SplashScreen.Parameters = PluginManager.parameters('Naptora_SplashScreen');
 
 Plg_mang.SplashScreen.SplImage = String(Plg_mang.SplashScreen.Parameters["Splash Image"]);
 Plg_mang.SplashScreen.FadeOutTime = Number(Plg_mang.SplashScreen.Parameters["Fade Out Time"]) || 120;
