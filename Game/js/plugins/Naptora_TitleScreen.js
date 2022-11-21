@@ -10,10 +10,6 @@
  * @dir img/menu/
  * @type file
  * 
- * @param Start key
- * @desc Key for show menu
- * @default z
- * 
  * @param Title Image
  * @desc Image to use as title
  * @default logo
@@ -26,12 +22,59 @@
  * Default: 100
  * @default 100
  * 
+ * @param ===== Press start =====
+ * @default
+ * 
+ * @param Press Start key
+ * @desc Key for show menu
+ * @default ok
+ * 
+ * @param Press start text
+ * @desc Text for show in "Press x key for start"
+ * Default: "Press enter for start"
+ * @default Press enter for start
+ * 
+ * @param Font size
+ * @desc Font size of text
+ * Default: 48
+ * @default 48
+ * 
+ * @param X Position
+ * @desc Position of text in X axis
+ * Default: Graphics.width/2
+ * @default Graphics.width/2
+ * 
+ * @param Y Position
+ * @desc Position of text in y axis.
+ * @default Graphics.height*(3/4)
+ * 
+ * @param Height
+ * @desc Height of text
+ * Default: 48
+ * @default 48
+ * 
+ * @param Width
+ * @desc Width of text
+ * Default: Graphics.width
+ * @default Graphics.width
+ * 
  */
 
 var params = PluginManager.parameters("Naptora_TitleScreen");
+
 var title_image_path = String(params["Title Image"]);
-var bg_image_path = String(params["Background"]);
 var title_factor = Number.parseInt(params["Title Image Factor"]);
+var bg_image_path = String(params["Background"]);
+
+var press_start_key = String(params["Press Start key"]);
+var press_start_text = String(params["Press start text"]);
+var press_start_fontsize = String(params["Font size"]);
+var press_start_x = String(params["X Position"]);
+var press_start_y = String(params["Y Position"]);
+var press_start_width = String(params["Width"]);
+var press_start_height = String(params["Height"]);
+
+
 
 (function(){
 
@@ -64,9 +107,36 @@ Scene_Title.prototype.createForeground = function() {
     // Climb title
     this._gameTitleSprite.y = Graphics.height / 4;
     this._gameTitleSprite.anchor.y = 0.5;
+
+    // Create text "Press key for start"
+    this._startTextSprite = new Sprite(new Bitmap(Graphics.width, Graphics.height));
+    this.addChild(this._startTextSprite);
+    this.DrawStartText();
+
 };
 
+Scene_Title.prototype.DrawStartText = function(){
+    var x = eval(press_start_x);
+    var y = eval(press_start_y);
+    var w = eval(press_start_width);
+    var h = eval(press_start_height);
 
+
+    this._startTextSprite.bitmap.fontSize = press_start_fontsize;
+    this._startTextSprite.bitmap.drawText(press_start_text, x, y, w, h, "center");
+    
+}
+
+Scene_Title.prototype.update = function() {
+    if (!this.isBusy()) {
+        
+        // Is user press key for start?
+        if(Input.isTriggered(press_start_key)){
+             this._commandWindow.open();
+        }
+    }
+    Scene_Base.prototype.update.call(this);
+}
 
 
 })();
