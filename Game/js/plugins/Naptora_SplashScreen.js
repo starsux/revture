@@ -4,13 +4,17 @@
  * @author Naptora
  *
  *
- * @param Splash Image
+ * @param Splash File Path
  * @desc The image to use when showing the splash screen
- * Default: Splash
- * @default Splash
- * @require 1
- * @dir img/system/
- * @type file
+ * Default: img/System/Splash
+ * @default img/System/Splash
+ * @type text
+ * 
+ * @param Splash File Type
+ * @desc Select the type file of splash file
+ * @type select
+ * @option Video (webm)
+ * @option Image
  *
  * @param Fade Out Time
  * @desc The time it takes to fade out, in frames.
@@ -38,12 +42,13 @@ var Plg_mang = Plg_mang || {};
 Plg_mang.SplashScreen = {};
 Plg_mang.SplashScreen.Parameters = PluginManager.parameters('Naptora_SplashScreen');
 
-Plg_mang.SplashScreen.SplImage = String(Plg_mang.SplashScreen.Parameters["Splash Image"]);
+Plg_mang.SplashScreen.SplImage = String(Plg_mang.SplashScreen.Parameters["Splash File Path"]);
+Plg_mang.SplashScreen.SplashType = Plg_mang.SplashScreen.Parameters["Splash File Type"];
+
 Plg_mang.SplashScreen.FadeOutTime = Number(Plg_mang.SplashScreen.Parameters["Fade Out Time"]) || 120;
 Plg_mang.SplashScreen.FadeInTime = Number(Plg_mang.SplashScreen.Parameters["Fade In Time"]) || 120;
 Plg_mang.SplashScreen.WaitTime = Number(Plg_mang.SplashScreen.Parameters["Wait Time"]) || 160;
 Plg_mang.SplashScreen.ImageFactor = Number.parseInt(Plg_mang.SplashScreen.Parameters['Image Factor']);
-
 
 //-----------------------------------------------------------------------------
 // Scene_Splash
@@ -55,6 +60,8 @@ function Scene_Splash() {
 }
 
 (function() {
+
+    
 
     //-----------------------------------------------------------------------------
     // Scene_Boot
@@ -135,7 +142,20 @@ function Scene_Splash() {
     };
 
     Scene_Splash.prototype.createSplashes = function() {
-        this._mvSplash = new Sprite(ImageManager.loadSystem(Plg_mang.SplashScreen.SplImage));
+
+        // Selected is an image?
+        if(Plg_mang.SplashScreen.SplashType.toUpperCase().includes("IMAGE")){
+            this._mvSplash = new Sprite(ImageManager.loadNormalBitmap(Plg_mang.SplashScreen.SplImage));
+        }else{
+
+            // Selected is video then: Create a texture for a video)
+            var video_texture = PIXI.Texture.fromVideo(Plg_mang.SplashScreen.SplImage);
+            this._mvSplash = new PIXI.Sprite(video_texture);
+
+            // Play video
+            this._mvSplash.texture.baseTexture.source.play();
+        }
+
 
         // Add to scene            
         this.addChild(this._mvSplash);
