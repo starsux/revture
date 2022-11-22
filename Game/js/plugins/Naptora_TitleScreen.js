@@ -58,6 +58,16 @@
  * Default: Graphics.width
  * @default Graphics.width
  * 
+ * @param Fade In (value)
+ * @desc More big = Faster, More small = slower
+ * Dafault: 0.1
+ * @default 0.1
+ * 
+ * @param Fade out (value)
+ * @desc More big = Faster, More small = slower
+ * Dafault: 0.1
+ * @default 0.1
+ * 
  */
 
 var params = PluginManager.parameters("Naptora_TitleScreen");
@@ -73,6 +83,8 @@ var press_start_x = String(params["X Position"]);
 var press_start_y = String(params["Y Position"]);
 var press_start_width = String(params["Width"]);
 var press_start_height = String(params["Height"]);
+var fade_in = Number.parseFloat(params["Fade out (value)"]);
+var fade_out = Number.parseFloat(params["Fade In (value)"]);
 
 
 
@@ -120,7 +132,7 @@ Scene_Title.prototype.DrawStartText = function(){
     var y = eval(press_start_y);
     var w = eval(press_start_width);
     var h = eval(press_start_height);
-
+    this._pressStartStatus = 0; // Status for alpha, 0 -> out; 1->in; 3-> Next near status
 
     this._startTextSprite.bitmap.fontSize = press_start_fontsize;
     this._startTextSprite.bitmap.drawText(press_start_text, x, y, w, h, "center");
@@ -129,14 +141,36 @@ Scene_Title.prototype.DrawStartText = function(){
 
 Scene_Title.prototype.update = function() {
     if (!this.isBusy()) {
+
+        // Press start text is visible?
+        if(this._startTextSprite.visible){
+            // is fade out?
+            if(this._pressStartStatus == 0){
+                this._startTextSprite.alpha -= fade_out;
+                
+                // Alpha is 0? Then change to fade in
+                if( this._startTextSprite.alpha <= 0) this._pressStartStatus = 1;
+
+            }else if(this._pressStartStatus == 1){
+                // Then is fade in
+                this._startTextSprite.alpha += fade_in;
+                // Alpha is 0? Then change to fade out
+                if( this._startTextSprite.alpha >= 1) this._pressStartStatus = 0;
+            }
+
+        }
         
         // Is user press key for start?
         if(Input.isTriggered(press_start_key)){
+
+            // Hide press start text
+            this._startTextSprite.visible = false;
+
+            // Open menu option
              this._commandWindow.open();
         }
     }
     Scene_Base.prototype.update.call(this);
 }
-
 
 })();
