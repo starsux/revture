@@ -146,19 +146,13 @@ function Scene_Splash() {
         // Selected is an image?
         if(Plg_mang.SplashScreen.SplashType.toUpperCase().includes("IMAGE")){
             this._mvSplash = new Sprite(ImageManager.loadNormalBitmap(Plg_mang.SplashScreen.SplImage));
+                // Add to scene            
+                this.addChild(this._mvSplash);
         }else{
 
-            // Selected is video then: Create a texture for a video)
-            var video_texture = PIXI.Texture.fromVideo(Plg_mang.SplashScreen.SplImage);
-            this._mvSplash = new PIXI.Sprite(video_texture);
-
             // Play video
-            this._mvSplash.texture.baseTexture.source.play();
+            Graphics.playVideo(Plg_mang.SplashScreen.SplImage);
         }
-
-
-        // Add to scene            
-        this.addChild(this._mvSplash);
     };
 
     Scene_Splash.prototype.resizeSplash = function(sprite) {
