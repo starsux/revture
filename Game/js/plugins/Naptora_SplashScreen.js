@@ -120,21 +120,27 @@ function Scene_Splash() {
     };
 
     Scene_Splash.prototype.update = function() {
-        if (!this._mvFadeIn) {
-            this.startFadeIn(Plg_mang.SplashScreen.FadeInTime, false);
-            this._mvFadeIn = true;
-        } else {
-            if (this._mvWaitTime > 0 && this._mvFadeOut == false) {
-                this._mvWaitTime--;
-            } else {
-                if (this._mvFadeOut == false) {
-                    this._mvFadeOut = true;
-                    this.startFadeOut(Plg_mang.SplashScreen.FadeOutTime, false);
-                }
-            }
-        }
+        // Fade In/Out image
+        // if (!this._mvFadeIn) {
+        //     this.startFadeIn(Plg_mang.SplashScreen.FadeInTime, false);
+        //     this._mvFadeIn = true;
+        // } else {
+        //     if (this._mvWaitTime > 0 && this._mvFadeOut == false) {
+        //         this._mvWaitTime--;
+        //     } else {
+        //         if (this._mvFadeOut == false) {
+        //             this._mvFadeOut = true;
+        //             this.startFadeOut(Plg_mang.SplashScreen.FadeOutTime, false);
+        //         }
+        //     }
+        // }
+        // if (this._mvFadeOut == true) {
+        //     this.gotoTitleOrTest();
+        // }
 
-        if (this._mvFadeOut == true) {
+        //? Video is not playing?
+        if(!Graphics.isVideoPlaying()){
+            // Go to title scene
             this.gotoTitleOrTest();
         }
 
@@ -151,7 +157,8 @@ function Scene_Splash() {
         }else{
 
             // Play video
-            Graphics.playVideo(Plg_mang.SplashScreen.SplImage);
+            var vid = Graphics.playVideo(Plg_mang.SplashScreen.SplImage);
+            console.log(vid);
         }
     };
 
