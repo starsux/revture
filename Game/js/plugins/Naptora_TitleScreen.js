@@ -25,6 +25,10 @@
  * @param ===== Press start =====
  * @default
  * 
+ * @param Custom command menu
+ * @desc False: Not call to default command menu
+ * @type boolean
+ * 
  * @param Press Start key
  * @desc Key for show menu
  * @default ok
@@ -70,23 +74,21 @@
  * 
  */
 
-var params = PluginManager.parameters("Naptora_TitleScreen");
+const TitleParms = PluginManager.parameters("Naptora_TitleScreen");
 
-var title_image_path = String(params["Title Image"]);
-var title_factor = Number.parseInt(params["Title Image Factor"]);
-var bg_image_path = String(params["Background"]);
+var title_image_path = String(TitleParms["Title Image"]);
+var title_factor = Number.parseInt(TitleParms["Title Image Factor"]);
+var bg_image_path = String(TitleParms["Background"]);
 
-var press_start_key = String(params["Press Start key"]);
-var press_start_text = String(params["Press start text"]);
-var press_start_fontsize = String(params["Font size"]);
-var press_start_x = String(params["X Position"]);
-var press_start_y = String(params["Y Position"]);
-var press_start_width = String(params["Width"]);
-var press_start_height = String(params["Height"]);
-var fade_in = Number.parseFloat(params["Fade out (value)"]);
-var fade_out = Number.parseFloat(params["Fade In (value)"]);
-
-
+var press_start_key = String(TitleParms["Press Start key"]);
+var press_start_text = String(TitleParms["Press start text"]);
+var press_start_fontsize = String(TitleParms["Font size"]);
+var press_start_x = String(TitleParms["X Position"]);
+var press_start_y = String(TitleParms["Y Position"]);
+var press_start_width = String(TitleParms["Width"]);
+var press_start_height = String(TitleParms["Height"]);
+var fade_in = Number.parseFloat(TitleParms["Fade out (value)"]);
+var fade_out = Number.parseFloat(TitleParms["Fade In (value)"]);
 
 (function(){
 
@@ -146,6 +148,7 @@ Scene_Title.prototype.update = function() {
         if(this._startTextSprite.visible){
             // is fade out?
             if(this._pressStartStatus == 0){
+                // Turn down alpha
                 this._startTextSprite.alpha -= fade_out;
                 
                 // Alpha is 0? Then change to fade in
@@ -165,9 +168,15 @@ Scene_Title.prototype.update = function() {
 
             // Hide press start text
             this._startTextSprite.visible = false;
+        
+            
+            if(TitleParms["Custom command menu"] === 'true'){
+                return;
+            }
 
             // Open menu option
-             this._commandWindow.open();
+            this._commandWindow.open();
+
         }
     }
     Scene_Base.prototype.update.call(this);

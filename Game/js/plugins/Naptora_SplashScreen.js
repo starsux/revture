@@ -157,8 +157,7 @@ function Scene_Splash() {
         }else{
 
             // Play video
-            var vid = Graphics.playVideo(Plg_mang.SplashScreen.SplImage);
-            console.log(vid);
+            Graphics.playVideo(Plg_mang.SplashScreen.SplImage);
         }
     };
 
