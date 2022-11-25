@@ -170,12 +170,12 @@ Scene_Title.prototype.update = function() {
             this._startTextSprite.visible = false;
         
             
-            if(TitleParms["Custom command menu"] === 'true'){
-                return;
+            if(TitleParms["Custom command menu"] === 'false'){
+                // Open menu option
+                this._commandWindow.open();
             }
 
-            // Open menu option
-            this._commandWindow.open();
+
 
         }
     }

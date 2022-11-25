@@ -35,7 +35,11 @@
  * @desc Change image size maintaining the aspect ratio
  * Default 100%
  * @default 100%
- *
+ * 
+ * @param Skip intro key
+ * @desc Key for skip naptora intro
+ * @default ok
+ * 
  */
 
 var Plg_mang = Plg_mang || {};
@@ -43,6 +47,7 @@ Plg_mang.SplashScreen = {};
 Plg_mang.SplashScreen.Parameters = PluginManager.parameters('Naptora_SplashScreen');
 
 Plg_mang.SplashScreen.SplImage = String(Plg_mang.SplashScreen.Parameters["Splash File Path"]);
+Plg_mang.SplashScreen.SkipKey = String(Plg_mang.SplashScreen.Parameters["Skip intro key"]);
 Plg_mang.SplashScreen.SplashType = Plg_mang.SplashScreen.Parameters["Splash File Type"];
 
 Plg_mang.SplashScreen.FadeOutTime = Number(Plg_mang.SplashScreen.Parameters["Fade Out Time"]) || 120;
@@ -139,7 +144,14 @@ function Scene_Splash() {
         // }
 
         //? Video is not playing?
-        if(!Graphics.isVideoPlaying()){
+        if(!Graphics.isVideoPlaying() || Input.isTriggered(Plg_mang.SplashScreen.SkipKey)){
+            
+            // Hide video
+            Graphics._updateVisibility(false);
+
+            // Stop video
+            Graphics._video.currentTime=Graphics._video.duration;
+
             // Go to title scene
             this.gotoTitleOrTest();
         }
