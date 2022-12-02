@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Title_Screen.unity
     guid: eda7c394e0eae12488c1055060792349
+  - enabled: 1
+    path: Assets/Scenes/WaitScreen.unity
+    guid: 629c859a0269f904ead82c0d7f7de5cf
+  - enabled: 1
+    path: Assets/Scenes/Saved_Games.unity
+    guid: 7efe69f04cf829a44b70827f3b00dc08
+  - enabled: 1
+    path: Assets/Scenes/Game_Settings.unity
+    guid: 35255385587006142bcab1d8628a497a
   m_configObjects: {}
