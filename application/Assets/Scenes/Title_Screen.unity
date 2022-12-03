@@ -557,8 +557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaitScene: {fileID: 102900000, guid: 629c859a0269f904ead82c0d7f7de5cf, type: 3}
-  ContinueScene: {fileID: 102900000, guid: 7efe69f04cf829a44b70827f3b00dc08, type: 3}
-  SettingsScene: {fileID: 102900000, guid: 35255385587006142bcab1d8628a497a, type: 3}
+  OptionsScene: {fileID: 102900000, guid: 07de59ccf6458644c94fadac9d297d18, type: 3}
+  ContinueScene: {fileID: 102900000, guid: 105f3ed6aed54e2449f7a2716d013593, type: 3}
 --- !u!1 &1356771146
 GameObject:
   m_ObjectHideFlags: 0
