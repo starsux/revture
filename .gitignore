@@ -14,8 +14,6 @@
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
-application/Library/PackageCache/
-
 # Recordings can get excessive in size
 /[Rr]ecordings/
 
