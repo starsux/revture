@@ -5,17 +5,14 @@ using UnityEngine;
 public class GameRuntime : MonoBehaviour
 {
     public GameObject player;
+    public string SpritesFolderPath;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Set all  parameters
-        player.transform.position = GameManager.currentGame.PlayerPosition;
-    }
+        // Set all playerparameters
+        player.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load(SpritesFolderPath + "/" + GameManager.currentGame.PlayerCharacter) as Sprite;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //player.transform.position = GameManager.currentGame.PlayerPosition;
     }
 }
