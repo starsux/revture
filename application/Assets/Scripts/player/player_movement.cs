@@ -17,7 +17,6 @@ public class player_movement : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(GameManager.currentGame.PlayerPosition);  
 
         // Get direction input of user
         float xmov = Input.GetAxisRaw("Horizontal");

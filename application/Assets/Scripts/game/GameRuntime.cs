@@ -11,7 +11,7 @@ public class GameRuntime : MonoBehaviour
     void Start()
     {
         //!DEBUG
-        //GameManager.CreateNewGame();
+        GameManager.CreateNewGame();
         //!ENDDEBUG
 
         // Set all playerparameters

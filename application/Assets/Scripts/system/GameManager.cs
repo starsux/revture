@@ -45,13 +45,16 @@ public class RevtureGame
     /// <summary>
     /// Generate game from random seed and stores in device
     /// </summary>
-    public static RevtureGameData Generate()
+    public static RevtureGameData Generate(string game_name = "generic")
     {
         // Create new class
         RevtureGameData data = new RevtureGameData();
 
-        //TODO: Set default values
+        //Set default values
         data.GAME_ID = Guid.NewGuid().ToString().Replace("-", "");
+        data.GAME_NAME = game_name;
+        data.GAME_SEED = GenerateSeed();
+        data.CreationDate = DateTime.Now.Date.ToShortDateString();
 
         // Convert Object to json
         string json = JsonUtility.ToJson(data);
@@ -66,6 +69,17 @@ public class RevtureGame
         return data;
     }
 
+    private static int GenerateSeed()
+    {
+        string seed = "";
+        for(int i=0; i<1; i++)
+        {
+            seed += UnityEngine.Random.value.ToString().Split(".")[1];
+        }
+
+        return int.Parse(seed);
+    }
+
     /// <summary>
     /// Reads file of game
     /// </summary>
@@ -74,6 +88,8 @@ public class RevtureGame
     {
         string file_path = STORAGEPATH + game_id;
         RevtureGameData data = JsonUtility.FromJson<RevtureGameData>(file_path);
+        //Set data in current execution
+        UnityEngine.Random.InitState(data.GAME_SEED);
         return data;
     }
 
@@ -116,7 +132,7 @@ public class RevtureGameData
     // Name setted by user
     public string GAME_NAME;
     // Gloabal seed for this game
-    public string GAME_SEED;
+    public int GAME_SEED;
     // Creation date
     public string CreationDate;
 

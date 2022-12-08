@@ -70,3 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+application/Temp/__Backupscenes/0.backup
+application/Temp/FSTimeGet-6b8e65a2ee40e644698c1f81291c963a
+application/Temp/UnityLockfile
+application/Temp/workerlic
