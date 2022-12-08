@@ -389,6 +389,7 @@
 "Assets/Scripts/game/GameRuntime.cs"
 "Assets/Scripts/player/player_movement.cs"
 "Assets/Scripts/system/GameManager.cs"
+"Assets/Scripts/system/SavedGames.cs"
 "Assets/Scripts/system/SplashScreen.cs"
 "Assets/Scripts/system/TS_Actions.cs"
 "Assets/Scripts/system/WaitScreen.cs"
