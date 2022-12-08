@@ -7,6 +7,7 @@ public class player_movement : MonoBehaviour
 {
     public float Speed = 5f;
     private Transform player;
+    private Vector3 dir;
 
     private void Awake()
     {
@@ -14,13 +15,30 @@ public class player_movement : MonoBehaviour
         Speed /= 10;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+        Debug.Log(GameManager.currentGame.PlayerPosition);  
+
+        // Get direction input of user
         float xmov = Input.GetAxisRaw("Horizontal");
         float ymov = Input.GetAxisRaw("Vertical");
-        Vector3 nwPos = new Vector3(xmov, ymov);
+        // Set in axis raw
+        dir = new Vector3(xmov, ymov);
+        // check if user does not move the character
+        if(dir == Vector3.zero && GameManager.currentGame.PlayerPosition != player.transform.position)
+        {
+            // Set this position as last
+            GameManager.currentGame.PlayerPosition = player.transform.position;
 
-        player.transform.position += nwPos * Speed;
+            // Save change
+            RevtureGame.SaveAll();
+        }
+    }
+
+    private void FixedUpdate()
+    {   
+        // Apply movement
+        player.transform.position += dir * Speed;
 
     }
 

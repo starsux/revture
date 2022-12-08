@@ -21,8 +21,6 @@ public class GameManager
 
 public class RevtureGame
 {
-
-
     /// <summary>
     /// Path containing the stored games
     /// </summary>
@@ -78,6 +76,21 @@ public class RevtureGame
         RevtureGameData data = JsonUtility.FromJson<RevtureGameData>(file_path);
         return data;
     }
+
+    /// <summary>
+    ///  Save all data modified in current game
+    /// </summary>
+    public static void SaveAll()
+    {
+        // Convert Object to json
+        string json = JsonUtility.ToJson(GameManager.currentGame);
+
+        // Save in device
+        string file_path = STORAGEPATH + GameManager.currentGame.GAME_ID;
+
+        File.WriteAllText(file_path, json);
+
+    }
 }
 // Data for create serializable class
 [Serializable]
@@ -90,10 +103,14 @@ public enum PlayableCharacters
 }
 
 
-// Serializable class for store in json
+/// <summary>
+/// Class for read and write data of game
+/// </summary>
 [Serializable]
 public class RevtureGameData
 {
+
+    #region data
     // Unique id for every game stored
     public string GAME_ID;
     // Name setted by user
@@ -107,5 +124,5 @@ public class RevtureGameData
     public Vector3 PlayerPosition;
     // Selected character by user in this game
     public PlayableCharacters PlayerCharacter;
-
+    #endregion
 }

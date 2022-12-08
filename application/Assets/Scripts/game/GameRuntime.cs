@@ -10,9 +10,12 @@ public class GameRuntime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //!DEBUG
+        //GameManager.CreateNewGame();
+        //!ENDDEBUG
 
         // Set all playerparameters
-        player.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load(SpritesFolderPath + "/" + GameManager.currentGame.PlayerCharacter) as Sprite;
+        //player.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load(SpritesFolderPath + "/" + GameManager.currentGame.PlayerCharacter) as Sprite;
         player.transform.position = GameManager.currentGame.PlayerPosition;
     }
 }
