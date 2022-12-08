@@ -1,0 +1,10 @@
+play:iniciar
+options: opciones 
+continue:Seguir
+select character:selecciona personaje
+general volume:volumen general
+music:música
+sound effect:efecto de sonido
+Language:
+close:
+press esc for skip:
