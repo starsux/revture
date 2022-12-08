@@ -15,7 +15,7 @@ D:/Documents/GitHub/revture/application
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-56013
+56103
 Successfully changed project path to: D:/Documents/GitHub/revture/application
 D:/Documents/GitHub/revture/application
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ D:/Documents/GitHub/revture/application
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10072] Host "[IP] 192.168.1.95 [Port] 0 [Flags] 2 [Guid] 3652803056 [EditorId] 3652803056 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-VBAEDE6) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [5416] Host "[IP] 192.168.1.95 [Port] 0 [Flags] 2 [Guid] 3625578699 [EditorId] 3625578699 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-VBAEDE6) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [10072] Host "[IP] 192.168.1.95 [Port] 0 [Flags] 2 [Guid] 3652803056 [EditorId] 3652803056 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-VBAEDE6) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5416] Host "[IP] 192.168.1.95 [Port] 0 [Flags] 2 [Guid] 3625578699 [EditorId] 3625578699 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-VBAEDE6) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 192.76 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 194.85 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.15f1 (e8e88683f834)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/Resources/UnitySubsystems
@@ -67,151 +67,42 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56840
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56456
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.014788 seconds.
+Registered in 0.011822 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 226.75 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 178.37 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.449 seconds
+- Completed reload, in  1.142 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1450ms)
-		BeginReloadAssembly (179ms)
+	ReloadAssembly (1143ms)
+		BeginReloadAssembly (124ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1049ms)
-			LoadAssemblies (175ms)
+		EndReloadAssembly (841ms)
+			LoadAssemblies (120ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (234ms)
+			SetupTypeCache (174ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (72ms)
-			SetupLoadedEditorAssemblies (622ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (513ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (34ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (227ms)
-				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (254ms)
-				ProcessInitializeOnLoadMethodAttributes (102ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (178ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (241ms)
+				ProcessInitializeOnLoadMethodAttributes (76ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009633 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Documents\GitHub\revture\application\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Documents\GitHub\revture\application\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 283.98 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  5.529 seconds
-Domain Reload Profiling:
-	ReloadAssembly (5531ms)
-		BeginReloadAssembly (229ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (5010ms)
-			LoadAssemblies (2430ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (602ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (277ms)
-			SetupLoadedEditorAssemblies (1385ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (284ms)
-				BeforeProcessingInitializeOnLoad (276ms)
-				ProcessInitializeOnLoadAttributes (616ms)
-				ProcessInitializeOnLoadMethodAttributes (180ms)
-				AfterProcessingInitializeOnLoad (13ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Refreshing native plugins compatible for Editor in 2.30 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5527 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 5966.
-Memory consumption went from 217.0 MB to 215.8 MB.
-Total: 7.465400 ms (FindLiveObjects: 0.588900 ms CreateObjectMapping: 0.596700 ms MarkObjects: 5.506200 ms  DeleteObjects: 0.771300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 84507.777429 seconds.
-  path: Assets/Img/Characters/personaje-0001.png
-  artifactKey: Guid(9329f449673a5064cac35b1e2a662a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Img/Characters/personaje-0001.png using Guid(9329f449673a5064cac35b1e2a662a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b081dc03ef49d4158f2b4bdb5d98ae9') in 0.352855 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.217249 seconds.
-  path: Assets/Img/Characters/personaje-0001.png
-  artifactKey: Guid(9329f449673a5064cac35b1e2a662a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Img/Characters/personaje-0001.png using Guid(9329f449673a5064cac35b1e2a662a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27e9307e62562d03d971068de519dcfc') in 0.023721 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 25.333559 seconds.
-  path: Assets/Img/Characters/arantia.png
-  artifactKey: Guid(9329f449673a5064cac35b1e2a662a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Img/Characters/arantia.png using Guid(9329f449673a5064cac35b1e2a662a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eba3010fd64d1b75529a0a74913ec0d7') in 0.032394 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.941938 seconds.
-  path: Assets/Img/Characters/arantia 1.png
-  artifactKey: Guid(3c14d600599ae894aade5e198c3c0ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Img/Characters/arantia 1.png using Guid(3c14d600599ae894aade5e198c3c0ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5faf179d02b5f27c596b9c7c27d6fa54') in 0.035107 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.728584 seconds.
-  path: Assets/Img/Characters/arantia 2.png
-  artifactKey: Guid(4e4de38e45f4b954da684946bdcc0910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Img/Characters/arantia 2.png using Guid(4e4de38e45f4b954da684946bdcc0910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1abf3257b3c8d1867cc72f00d48d4a5') in 0.037650 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.742817 seconds.
-  path: Assets/Img/Characters/arantia 3.png
-  artifactKey: Guid(cd574e300acc86546a371bd7fbec7a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Img/Characters/arantia 3.png using Guid(cd574e300acc86546a371bd7fbec7a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b6f4c96d00ccdf730bf551dd65e9faf') in 0.024522 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 77.832601 seconds.
-  path: Assets/Img/Characters/stenpek.png
-  artifactKey: Guid(3c14d600599ae894aade5e198c3c0ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Img/Characters/stenpek.png using Guid(3c14d600599ae894aade5e198c3c0ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '318c6a5d7651567ec6427449a87b87f5') in 0.028694 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.117706 seconds.
-  path: Assets/Img/Characters/ren.png
-  artifactKey: Guid(4e4de38e45f4b954da684946bdcc0910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Img/Characters/ren.png using Guid(4e4de38e45f4b954da684946bdcc0910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f2d10c463f1d35667eceefc780ddfc5') in 0.025245 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.844821 seconds.
-  path: Assets/Img/Characters/pikun.png
-  artifactKey: Guid(cd574e300acc86546a371bd7fbec7a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Img/Characters/pikun.png using Guid(cd574e300acc86546a371bd7fbec7a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '936068087bfe0c379a141b9d006d21a6') in 0.035072 seconds 
+Registered in 0.007948 seconds.
