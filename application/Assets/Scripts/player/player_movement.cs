@@ -6,6 +6,7 @@ using UnityEngine;
 public class player_movement : MonoBehaviour
 {
     public float Speed = 5f;
+    public SpriteRenderer PlayerSprite;
     private Transform player;
     private Vector3 dir;
 
@@ -32,12 +33,26 @@ public class player_movement : MonoBehaviour
             // Save change
             RevtureGame.SaveAll();
         }
+
+        // Is player direction left?
+        if(xmov < 0)
+        {
+            // Flip sprite
+            PlayerSprite.flipX = true;
+        }
+        else if(xmov > 0)
+        {
+            // Return to normal
+            PlayerSprite.flipX = false;
+
+        }
     }
 
     private void FixedUpdate()
-    {   
+    {
         // Apply movement
-        player.transform.position += dir * Speed;
+        player.transform.position += dir * Speed;   
+
 
     }
 
