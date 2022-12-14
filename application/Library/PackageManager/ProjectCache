@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638064051297523432
-    m_Hash: 979500053
+      ticks: 638064066127367424
+    m_Hash: 3162379725
   m_LockFileStatus:
     m_FilePath: D:/Documents/GitHub/revture/application/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638064051297993145
-    m_Hash: 1957856056
+      ticks: 638064066127372471
+    m_Hash: 2567944130
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
