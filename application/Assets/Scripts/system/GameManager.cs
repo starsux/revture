@@ -118,6 +118,8 @@ public class RevtureGame
             seed += splitValue[1].Substring(0, 5);
         }
 
+        // Get first 7 digits
+        seed = seed.Substring(0, 7);
         // Convert the seed string to an integer and return it
         return int.Parse(seed);
     }
@@ -178,16 +180,20 @@ public class RevtureGameData
     #region data
     // Unique id for every game stored
     public string GAME_ID;
-    // Name setted by user
+    // Name selected by user
     public string GAME_NAME;
     // Gloabal seed for this game
     public int GAME_SEED;
     // Creation date
     public string CreationDate;
+    // Time played
+    public float GameSeconds;
+    // Most played character
+    public PlayableCharacters MSPlayerCharacter;
 
     // Last player position
     public Vector3 PlayerPosition;
-    // Selected character by user in this game
+    // Last Selected character by user in this game
     public PlayableCharacters PlayerCharacter;
     #endregion
 }

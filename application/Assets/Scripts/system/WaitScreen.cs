@@ -7,7 +7,6 @@ public class WaitScreen : MonoBehaviour
 {
     public string CinematicFileName;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +28,5 @@ public class WaitScreen : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
