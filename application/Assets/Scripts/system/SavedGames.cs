@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SavedGames : MonoBehaviour
 {
+    public Object WaitScene;
+    public ScrollRect sr;
+    public RectTransform Canvas_Screen;
     public GameObject CardPrefab;
     public GameObject CardMessage;
     public RectTransform RTCardContainer;
@@ -11,6 +17,8 @@ public class SavedGames : MonoBehaviour
 
     private int CardSelected = 0;
     private List<GameObject> Cards;
+    private Vector3 DefaultCardSize;
+    private float scrollOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +27,7 @@ public class SavedGames : MonoBehaviour
         List<RevtureGameData> i = GameManager.RetrieveAllStoredGames();
 
         // Are there at least 1?
-        if(i.Count > 0)
+        if (i.Count > 0)
         {
             Cards = new List<GameObject>();
             // iterate in all fetched files
@@ -29,6 +37,8 @@ public class SavedGames : MonoBehaviour
                 GameObject tempcard = Instantiate(CardPrefab, RTCardContainer.gameObject.transform);
                 // Set game name
                 tempcard.GetComponent<GS_CARD>()._gamename = c.GAME_NAME;
+                // Set game id
+                tempcard.GetComponent<GS_CARD>()._GAMEID = c.GAME_ID;
                 // Retrieve and set name of most played character
                 tempcard.GetComponent<GS_CARD>()._mp_character = c.MSPlayerCharacter;
                 // Get total seconds played of game
@@ -37,25 +47,71 @@ public class SavedGames : MonoBehaviour
                 tempcard.GetComponent<GS_CARD>()._time_played = tsp.Minutes + ":" + tsp.Seconds;
                 Cards.Add(tempcard);
             }
+
+            // Store current card size
+            DefaultCardSize = Cards[0].GetComponent<RectTransform>().localScale;
+            scrollOffset = Cards.Count * 1.2f;
+            // update scroll limits
+            RTCardContainer.sizeDelta = new Vector2(150 * scrollOffset, RTCardContainer.sizeDelta.y);
+
+            // Move scroll to first card
+            sr.normalizedPosition = new Vector2(0.5f,0);
         }
         else
         {
             // Spawn message card
-            GameObject tempcard = Instantiate(CardMessage, RTCardContainer.gameObject.transform);
+            Instantiate(CardMessage, RTCardContainer.gameObject.transform);
 
         }
 
 
-        // update scroll limits
-        RTCardContainer.sizeDelta = new Vector2(150, RTCardContainer.sizeDelta.y);
     }
 
     void Update()
     {
-        // Increase size of selected card
-        Cards[CardSelected].GetComponent<RectTransform>().localScale = new Vector3(IncreasingFactor, IncreasingFactor, IncreasingFactor);
+        // Are there cards found?
+        if(Cards != null)
+        {
 
-        //TODO: On mouse wheel, set card as selected
+            //! On mouse wheel, set card as selected !
+            List<RaycastResult> raycast_cards = new List<RaycastResult>(); // results of canvas raycast
+            PointerEventData ped = new PointerEventData(EventSystem.current); // Store for modify current pointer ed
+            ped.position = Canvas_Screen.sizeDelta / 2; // Set pointer position in middle of screen
+            EventSystem.current.RaycastAll(ped, raycast_cards); // raycast for get card in middle of screen
+
+            foreach (var i in raycast_cards)
+            {
+                // current g.o. is a card?
+                if (i.gameObject.CompareTag("UICARD"))
+                {
+                    // This is the current card, then
+                    CardSelected = Cards.IndexOf(i.gameObject);
+                }
+            }
+
+            // Increase size of selected card
+            Cards[CardSelected].GetComponent<RectTransform>().localScale = new Vector3(IncreasingFactor, IncreasingFactor, IncreasingFactor);
+
+            // Decrease other cards
+            foreach (var i in Cards)
+            {
+                //Is current different of selected?
+                if (i != Cards[CardSelected])
+                {
+                    i.GetComponent<RectTransform>().localScale = DefaultCardSize;
+                }
+            }
+        }
+    }
+
+    public void LaunchGame()
+    {
+        // Go to game of current card
+        // // Set status for waitScreen (Action;Game ID)
+        TS_Actions.WStatus = "LOADGAME;" + Cards[CardSelected].GetComponent<GS_CARD>()._GAMEID;
+        // Go to wait screen
+        SceneManager.LoadScene(WaitScene.name);
+
 
     }
 

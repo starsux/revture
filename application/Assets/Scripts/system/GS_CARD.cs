@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GS_CARD : MonoBehaviour
 {
     public string _gamename; // game name
+    public string _GAMEID; // Game id
     public PlayableCharacters _mp_character; // most played character
     public string _time_played; // mm:ss
+    public Object WaitScene;
+
 
     public TextMeshProUGUI GameNameText;
     public TextMeshProUGUI GameStatsText;

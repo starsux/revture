@@ -14,4 +14,6 @@ public class GameRuntime : MonoBehaviour
         //player.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load(SpritesFolderPath + "/" + GameManager.currentGame.PlayerCharacter) as Sprite;
         player.transform.position = GameManager.currentGame.PlayerPosition;
     }
+
+
 }

@@ -25,6 +25,8 @@ public class WaitScreen : MonoBehaviour
         {
             string game_id = args[1];
             GameManager.LoadGame(game_id);
+            SceneManager.LoadScene("GAME");
+
         }
     }
 

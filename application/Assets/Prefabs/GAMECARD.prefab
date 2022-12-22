@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 2235124262835321610}
   m_Layer: 5
   m_Name: GAMECARD
-  m_TagString: Untagged
+  m_TagString: UICARD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +181,7 @@ RectTransform:
   m_GameObject: {fileID: 2235124262835321612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2235124262741034176}
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -246,8 +246,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gamename: 
+  _GAMEID: 
   _mp_character: 0
   _time_played: 
+  WaitScene: {fileID: 102900000, guid: 629c859a0269f904ead82c0d7f7de5cf, type: 3}
   GameNameText: {fileID: 2235124263585006165}
   GameStatsText: {fileID: 2235124263836612731}
   banner: {fileID: 2235124262741034177}
@@ -421,7 +423,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 14
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -556,7 +558,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 14
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
