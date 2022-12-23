@@ -14,5 +14,6 @@ public class GameRuntime : MonoBehaviour
         player.transform.position = GameManager.currentGame.PlayerPosition;
     }
 
+    
 
 }

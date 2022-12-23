@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public ParticleSystem FX_smoke;
+    public ParticleSystem FX_slm;
     public string CharactersSpritePath;
     public CapsuleCollider2D Normal_Collider;
     public CapsuleCollider2D SLM_Collider;
@@ -95,6 +96,12 @@ public class PlayerManager : MonoBehaviour
 
     }
 
+    internal void RotateFXSLM(float dirx, float diry)
+    {
+        FX_slm.gameObject.transform.rotation = Quaternion.LookRotation(new Vector3(dirx, diry));
+
+    }
+
     // Switch between slime/normal
     private void TogglePlayerMode()
     {
@@ -109,6 +116,13 @@ public class PlayerManager : MonoBehaviour
             // disable slime sprite
             SLM_Collider.gameObject.SetActive(false);
 
+            // Switch fx smoke
+            FX_smoke.gameObject.SetActive(CurrentCharacter == PlayableCharacters.Ren);
+
+            // Disable slime fx
+            FX_slm.gameObject.SetActive(false);
+
+
         }
         else
         {
@@ -117,6 +131,9 @@ public class PlayerManager : MonoBehaviour
 
             // Enable slime sprite
             SLM_Collider.gameObject.SetActive(true);
+
+            // Off smoke effect
+            FX_smoke.gameObject.SetActive(false);
 
         }
     }

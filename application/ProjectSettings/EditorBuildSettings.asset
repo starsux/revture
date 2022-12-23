@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Saved_Games.unity
     guid: 105f3ed6aed54e2449f7a2716d013593
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/Game_INTRO.unity
     guid: 3b93b0f997be6af4992b10a2fb6e0740
   m_configObjects: {}
