@@ -6,14 +6,18 @@ using UnityEngine;
 public class player_movement : MonoBehaviour
 {
     public float Speed = 5f;
+    public float Slime_Speed = 6f;
     public SpriteRenderer PlayerSprite;
     private Transform player;
     private Vector3 dir;
+    private PlayerManager _PM;
 
     private void Awake()
     {
+        _PM = this.gameObject.GetComponent<PlayerManager>();
         player = this.gameObject.GetComponent<Transform>();
         Speed /= 10;
+        Slime_Speed /= 10;
     }
 
     private void Update()
@@ -51,7 +55,7 @@ public class player_movement : MonoBehaviour
     private void FixedUpdate()
     {
         // Apply movement
-        player.transform.position += dir * Speed;   
+        player.transform.position += dir * _PM.GetSpeed(Speed,Slime_Speed);   
 
 
     }
