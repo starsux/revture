@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 7ad3e3b84dac2b14aaab3ea11d5a7480, type: 2}
   m_Color: {r: 0.003921569, g: 0.34901962, b: 0.34509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 7ad3e3b84dac2b14aaab3ea11d5a7480, type: 2}
   m_Color: {r: 0.047058824, g: 0.67058825, b: 0.65882355, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 7ad3e3b84dac2b14aaab3ea11d5a7480, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -250,6 +250,11 @@ MonoBehaviour:
   _mp_character: 0
   _time_played: 
   WaitScene: {fileID: 102900000, guid: 629c859a0269f904ead82c0d7f7de5cf, type: 3}
+  GrayGroup:
+  - {fileID: 2235124262835321611}
+  - {fileID: 2235124262741034177}
+  - {fileID: 2235124263264171627}
+  - {fileID: 2235124262391012557}
   GameNameText: {fileID: 2235124263585006165}
   GameStatsText: {fileID: 2235124263836612731}
   banner: {fileID: 2235124262741034177}
@@ -312,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 7ad3e3b84dac2b14aaab3ea11d5a7480, type: 2}
   m_Color: {r: 0.007843138, g: 0.20784314, b: 0.20784314, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

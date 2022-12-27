@@ -13,6 +13,7 @@ public class GS_CARD : MonoBehaviour
     public string _time_played; // mm:ss
     public Object WaitScene;
 
+    [SerializeField] public Image[] GrayGroup;
 
     public TextMeshProUGUI GameNameText;
     public TextMeshProUGUI GameStatsText;

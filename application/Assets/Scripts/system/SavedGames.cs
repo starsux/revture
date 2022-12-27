@@ -19,6 +19,8 @@ public class SavedGames : MonoBehaviour
     private List<GameObject> Cards;
     private Vector3 DefaultCardSize;
     private float scrollOffset;
+    public Material gry;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,7 @@ public class SavedGames : MonoBehaviour
                 System.TimeSpan tsp = System.TimeSpan.FromSeconds(c.GameSeconds);
                 // Fromat and set time
                 tempcard.GetComponent<GS_CARD>()._time_played = tsp.Minutes + ":" + tsp.Seconds;
+                ApplyGrayScale(tempcard,true);
                 Cards.Add(tempcard);
             }
 
@@ -65,6 +68,23 @@ public class SavedGames : MonoBehaviour
         }
 
 
+    }
+
+    private void ApplyGrayScale(GameObject o,bool v)
+    {
+        var ToApplyGray = o.GetComponent<GS_CARD>().GrayGroup;
+        foreach(var i in ToApplyGray)
+        {
+            if (v)
+            {
+                i.material = gry;
+            }
+            else
+            {
+                i.material = null;
+            }
+
+        }
     }
 
     void Update()
@@ -91,6 +111,8 @@ public class SavedGames : MonoBehaviour
 
             // Increase size of selected card
             Cards[CardSelected].GetComponent<RectTransform>().localScale = new Vector3(IncreasingFactor, IncreasingFactor, IncreasingFactor);
+            ApplyGrayScale(Cards[CardSelected], false);
+
 
             // Decrease other cards
             foreach (var i in Cards)
@@ -99,6 +121,8 @@ public class SavedGames : MonoBehaviour
                 if (i != Cards[CardSelected])
                 {
                     i.GetComponent<RectTransform>().localScale = DefaultCardSize;
+                    ApplyGrayScale(i, true);
+
                 }
             }
         }
