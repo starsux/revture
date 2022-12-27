@@ -15,8 +15,8 @@ public class SavedGames : MonoBehaviour
     public RectTransform RTCardContainer;
     public float IncreasingFactor = 1;
 
-    private int CardSelected = 0;
-    private List<GameObject> Cards;
+    public static int CardSelected = 0;
+    public static List<GameObject> Cards;
     private Vector3 DefaultCardSize;
     private float scrollOffset;
     public Material gry;
@@ -87,10 +87,34 @@ public class SavedGames : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        // Is user scrolling?
+        if (Input.GetAxis("Mouse ScrollWheel") == 0)
+        {
+            // Wait until scroll was zero
+            sr.gameObject.GetComponent<Image>().raycastTarget = false;
+        }
+        else
+        {
+            sr.gameObject.GetComponent<Image>().raycastTarget = true;
+            // Calculate the new scroll position
+            float scrollDelta = Input.GetAxis("Mouse ScrollWheel");
+            float newScrollPosition = sr.verticalNormalizedPosition - scrollDelta;
+
+            // Clamp the new scroll position between 0 and 1
+            newScrollPosition = Mathf.Clamp(newScrollPosition, 0, 1);
+
+            // Set the scroll position
+            sr.verticalNormalizedPosition = newScrollPosition;
+        }
+    }
+
     void Update()
     {
+
         // Are there cards found?
-        if(Cards != null)
+        if (Cards != null)
         {
 
             //! On mouse wheel, set card as selected !
@@ -128,15 +152,6 @@ public class SavedGames : MonoBehaviour
         }
     }
 
-    public void LaunchGame()
-    {
-        // Go to game of current card
-        // // Set status for waitScreen (Action;Game ID)
-        TS_Actions.WStatus = "LOADGAME;" + Cards[CardSelected].GetComponent<GS_CARD>()._GAMEID;
-        // Go to wait screen
-        SceneManager.LoadScene(WaitScene.name);
 
-
-    }
 
 }

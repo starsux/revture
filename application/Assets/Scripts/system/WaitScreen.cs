@@ -18,7 +18,7 @@ public class WaitScreen : MonoBehaviour
         {
             //todo: Play cinematic  async while create new game
 
-            GameManager.CreateNewGame();
+            GameManager.CreateNewGame(args[2]);
             SceneManager.LoadScene("GAME");
 
         }else if (args[0] == "LOADGAME")

@@ -44,10 +44,12 @@ Shader "Custom/Grayscale"
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv) * _Color;
-                float gray = (col.r + col.g + col.b) / 3;
-                //col.rgb = lerp(col.rgb,float3(gray, gray, gray),_GrayFactor);
+                float gray = (col.r + col.g + col.b + col.a) / 4;
+                col.rgb = lerp(col.rgb, float3(gray, gray, gray), _GrayFactor);
+                col.a = lerp(col.a, gray, _GrayFactor);
                 return col;
             }
+
             ENDCG
         }
     }

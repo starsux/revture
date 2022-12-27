@@ -14,10 +14,10 @@ public class GameManager
     /// <summary>
     /// Set and generate new file with default data
     /// </summary>
-    public static void CreateNewGame()
+    public static void CreateNewGame(string name)
     {
         // Generate game
-        currentGame = RevtureGame.Generate();
+        currentGame = RevtureGame.Generate(name);
     }
 
     /// <summary>

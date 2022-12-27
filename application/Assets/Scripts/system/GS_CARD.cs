@@ -23,7 +23,15 @@ public class GS_CARD : MonoBehaviour
     {
         GameNameText.text = _gamename;
         GameStatsText.text = _time_played;
-        banner.sprite = (Sprite)Resources.Load("Img/banner" + _mp_character + ".png");
     }
+    public void LaunchGame()
+    {
+        // Go to game of current card
+        // // Set status for waitScreen (Action;Game ID)
+        TS_Actions.WStatus = "LOADGAME;" + SavedGames.Cards[SavedGames.CardSelected].GetComponent<GS_CARD>()._GAMEID;
+        // Go to wait screen
+        SceneManager.LoadScene(WaitScene.name);
 
+
+    }
 }
