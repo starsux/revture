@@ -178,6 +178,8 @@ public class RevtureGameData
     }
 
     #region data
+    // Essential skills unlocked level, 0 -> None
+    public int skills_level = 0;
     // Unique id for every game stored
     public string GAME_ID;
     // Name selected by user

@@ -76,8 +76,19 @@ public class player_movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Apply movement
-        player.transform.position += dir * _PM.GetSpeed(Speed,Slime_Speed);
+        // Player is moving in diagonal?
+        if(dir.x != 0 && dir.y != 0)
+        {
+            // keep normal speed
+            dir /= Mathf.Sqrt(2);
+            player.transform.position += dir * _PM.GetSpeed(Speed, Slime_Speed);
+
+        }
+        else
+        {
+            player.transform.position += dir * _PM.GetSpeed(Speed, Slime_Speed);
+
+        }
 
 
 
