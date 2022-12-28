@@ -47,8 +47,9 @@ public class PlayerManager : MonoBehaviour
         }
 
         // User tries to switch character?
-        for(int i=1; i<CharactersMax; i++)
+        for(int i=1; i<CharactersMax+1; i++)
         {
+            
             if (Input.GetKeyUp(i.ToString()))
             {
                 SwitchCharacter(i-1);
