@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour
 {
-    public Object NextScene;
+    public int NextScene;
     public string movie;
 
     private void Start(){
@@ -19,6 +20,6 @@ public class SplashScreen : MonoBehaviour
 
     private void EndVideo(UnityEngine.Video.VideoPlayer source)
     {
-        SceneManager.LoadScene(NextScene.name);
+        SceneManager.LoadScene(NextScene);
     }
 }

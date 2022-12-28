@@ -11,7 +11,7 @@ public class GS_CARD : MonoBehaviour
     public string _GAMEID; // Game id
     public PlayableCharacters _mp_character; // most played character
     public string _time_played; // mm:ss
-    public Object WaitScene;
+    public int WaitScene;
 
     [SerializeField] public Image[] GrayGroup;
 
@@ -30,7 +30,7 @@ public class GS_CARD : MonoBehaviour
         // // Set status for waitScreen (Action;Game ID)
         TS_Actions.WStatus = "LOADGAME;" + SavedGames.Cards[SavedGames.CardSelected].GetComponent<GS_CARD>()._GAMEID;
         // Go to wait screen
-        SceneManager.LoadScene(WaitScene.name);
+        SceneManager.LoadScene(WaitScene);
 
 
     }

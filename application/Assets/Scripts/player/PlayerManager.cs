@@ -16,8 +16,6 @@ public class PlayerManager : MonoBehaviour
     private int CharactersMax = 0;
 
 
-    public KeyCode KeyForToggleSlime = KeyCode.Q;
-
     [Header("Character's sprite")]
     public Sprite Arantia;
     public Sprite Arantia_SLM;
@@ -36,6 +34,9 @@ public class PlayerManager : MonoBehaviour
 
     public Image PowerBar;
 
+    [Header("Player Skills")]
+    public PlayerSkills[] Skills;
+
 
     void Start()
     {
@@ -50,14 +51,7 @@ public class PlayerManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
-        // User press key toggle?
-        if (Input.GetKeyUp(KeyForToggleSlime))
-        {
-            TogglePlayerMode();
-        }
-
+    {        
         // User tries to switch character?
         for(int i=1; i<CharactersMax+1; i++)
         {
@@ -173,4 +167,20 @@ public class PlayerManager : MonoBehaviour
         if (NormalMode) return speed;
         else return slime_Speed;
     }
+}
+
+[Serializable]
+public class PlayerSkills
+{
+    public enum Skills
+    {
+        slime,
+        suicidio,
+        composer,
+        CyclicBullet
+    }
+
+    public Skills skill;
+    public KeyCode KeyActivate;
+    public bool unlocked = true;
 }

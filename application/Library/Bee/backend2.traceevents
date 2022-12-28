@@ -1,0 +1,580 @@
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1672258239769768, "dur":101, "ph":"X", "name": "IPC_Client_InitializeAndConnectToParent",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1672258239769948, "dur":28315, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1672258239798279, "dur":179, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1672258239798538, "dur":336, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1672258239799119, "dur":69, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":0, "ts":1672258239799264, "dur":61, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/level2" }}
+,{ "pid":12345, "tid":0, "ts":1672258239799425, "dur":62, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/resources.assets" }}
+,{ "pid":12345, "tid":0, "ts":1672258239799596, "dur":69, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":0, "ts":1672258239799772, "dur":61, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":0, "ts":1672258239800307, "dur":50, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239800489, "dur":52, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239801045, "dur":97, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239801274, "dur":96, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239801497, "dur":96, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239801720, "dur":97, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239802025, "dur":52, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239802118, "dur":96, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239802345, "dur":97, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239802450, "dur":53, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239802574, "dur":93, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239802675, "dur":53, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239802809, "dur":85, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239802902, "dur":56, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239803150, "dur":53, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239803244, "dur":89, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239803377, "dur":50, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239803468, "dur":72, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239803673, "dur":74, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239803830, "dur":51, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239804052, "dur":52, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239804247, "dur":73, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239804942, "dur":56, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239805004, "dur":86, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239805142, "dur":54, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239805244, "dur":54, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Cinemachine.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239805351, "dur":65, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239805468, "dur":53, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239805564, "dur":73, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239805644, "dur":85, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239805774, "dur":71, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239805852, "dur":81, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239806057, "dur":56, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239806168, "dur":55, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239806265, "dur":69, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239806436, "dur":64, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239806603, "dur":63, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239806773, "dur":77, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239806856, "dur":58, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/Revture_Data/app.info" }}
+,{ "pid":12345, "tid":0, "ts":1672258239807105, "dur":103, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":0, "ts":1672258239807321, "dur":77, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":0, "ts":1672258239807405, "dur":95, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":0, "ts":1672258239807555, "dur":69, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":0, "ts":1672258239807632, "dur":84, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":0, "ts":1672258239807851, "dur":85, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":0, "ts":1672258239808067, "dur":85, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":0, "ts":1672258239798932, "dur":9422, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1672258239808356, "dur":1883413, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1672258241691771, "dur":103, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1672258241691874, "dur":67, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1672258241692095, "dur":2719, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1672258239799685, "dur":8681, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1672258239808373, "dur":7722, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1672258239817088, "dur":494, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1672258239817923, "dur":13822, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1672258239831749, "dur":495, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":1, "ts":1672258239833134, "dur":19207, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":1, "ts":1672258239852450, "dur":195, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":1, "ts":1672258239852726, "dur":3890, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":1, "ts":1672258239856741, "dur":14785, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258239856737, "dur":14792, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258239871605, "dur":1078, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258239872783, "dur":22527, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258239872779, "dur":22534, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258239895344, "dur":85882, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258239981316, "dur":451, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1672258239982034, "dur":16980, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1672258239999116, "dur":23947, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258239999111, "dur":23954, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258240023099, "dur":1161, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258240024349, "dur":200, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1672258240024797, "dur":2540, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1672258240027443, "dur":11869, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258240027440, "dur":11875, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258240039733, "dur":1166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258240040994, "dur":573, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1672258240041623, "dur":12115, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1672258240053845, "dur":12224, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258240053841, "dur":12231, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258240066100, "dur":1193, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1672258240067378, "dur":182, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1672258240067583, "dur":417369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1672258240485055, "dur":7298, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\mscorlib.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240485052, "dur":7304, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240492698, "dur":4924, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240497650, "dur":3764, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240497648, "dur":3769, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240501494, "dur":17689, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240519212, "dur":5339, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Xml.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240519208, "dur":5346, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240524583, "dur":3826, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240528438, "dur":356, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240528435, "dur":361, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240528815, "dur":1074, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240529915, "dur":208, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240529913, "dur":211, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240567283, "dur":480, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1672258240530144, "dur":37639, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240568734, "dur":7067, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Data.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240568731, "dur":7079, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240575830, "dur":66027, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240641890, "dur":1082, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240641888, "dur":1086, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240642999, "dur":1718, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240644745, "dur":177, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240644743, "dur":180, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240644975, "dur":961, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240645967, "dur":1497, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240645964, "dur":1503, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240647496, "dur":1234, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240648760, "dur":244019, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240648757, "dur":244025, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240892816, "dur":34743, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240927583, "dur":1087, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240927581, "dur":1090, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240928686, "dur":2476, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240931196, "dur":313, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240931190, "dur":321, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240931531, "dur":1295, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240932855, "dur":198, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240932853, "dur":201, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240933071, "dur":1117, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240934217, "dur":211, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240934215, "dur":215, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240934451, "dur":1217, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240935698, "dur":180, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240935695, "dur":185, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240935900, "dur":1587, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240937522, "dur":266, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240937519, "dur":271, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240937812, "dur":1254, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240939097, "dur":150, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240939094, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240939278, "dur":1133, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240940437, "dur":661, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240940435, "dur":666, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240941132, "dur":3186, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240944357, "dur":169, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240944353, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240944549, "dur":1199, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240945775, "dur":773, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240945773, "dur":778, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240946584, "dur":1631, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240948247, "dur":148, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.AI.Navigation.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240948243, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.AI.Navigation.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240948417, "dur":957, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.AI.Navigation.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240949402, "dur":154, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240949400, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240949576, "dur":978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240950592, "dur":253, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240950589, "dur":259, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240950873, "dur":1178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240952093, "dur":116044, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258240952090, "dur":116050, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241068200, "dur":1242, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241069473, "dur":210, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241069471, "dur":213, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241069705, "dur":1035, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241070774, "dur":67192, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241070771, "dur":67198, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241138002, "dur":12022, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241150055, "dur":40837, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241150052, "dur":40843, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241190921, "dur":1035, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241191982, "dur":251, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241191979, "dur":256, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241192257, "dur":1000, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241193285, "dur":36948, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241193282, "dur":36953, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241230255, "dur":4328, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241234616, "dur":44022, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241234613, "dur":44028, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241278671, "dur":1107, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241279809, "dur":63612, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241279806, "dur":63617, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241343452, "dur":1367, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241344852, "dur":33463, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241344849, "dur":33469, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241378388, "dur":1240, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241379662, "dur":203, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241379659, "dur":208, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241379890, "dur":1010, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241380928, "dur":43680, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241380926, "dur":43685, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241424639, "dur":992, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241425657, "dur":42457, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241425655, "dur":42462, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241468150, "dur":1445, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241469626, "dur":39860, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241469623, "dur":39866, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241509522, "dur":1092, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241510643, "dur":38482, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241510641, "dur":38487, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241549152, "dur":1157, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241550338, "dur":29285, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Temp\\StagingArea\\Data\\Plugins\\x86_64\\lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241550336, "dur":29289, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241580162, "dur":1119, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":1, "ts":1672258241581340, "dur":1353, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/sharedassets5.assets" }}
+,{ "pid":12345, "tid":1, "ts":1672258241582774, "dur":3279, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/sharedassets4.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1672258241586125, "dur":1701, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/sharedassets4.assets" }}
+,{ "pid":12345, "tid":1, "ts":1672258241587886, "dur":1275, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":1, "ts":1672258241589188, "dur":12164, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1672258241589186, "dur":12169, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1672258241601400, "dur":905, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1672258241602332, "dur":89430, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1672258239799800, "dur":8600, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1672258239808401, "dur":7700, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1672258239816174, "dur":1112611, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityPlayer.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258239816121, "dur":1112666, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258240928804, "dur":33520, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258240962410, "dur":190, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258240962408, "dur":194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258240962620, "dur":27131, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258240989781, "dur":43118, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258240989778, "dur":43124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241032929, "dur":4530, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241037497, "dur":62466, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241037494, "dur":62473, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241099992, "dur":1000, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241101022, "dur":41962, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241101019, "dur":41968, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241143016, "dur":2508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241145555, "dur":81325, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241145552, "dur":81331, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241226910, "dur":1516, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241228457, "dur":194, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241228454, "dur":199, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241228671, "dur":1189, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241229890, "dur":51023, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241229887, "dur":51029, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241280940, "dur":1235, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241282204, "dur":125676, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.PropertiesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241282201, "dur":125681, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.PropertiesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241407917, "dur":1286, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.PropertiesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241409236, "dur":38227, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241409232, "dur":38234, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241447498, "dur":1053, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241448578, "dur":2032, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241448576, "dur":2036, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241450638, "dur":2423, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241453090, "dur":42796, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.ContentLoadModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241453087, "dur":42801, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241495923, "dur":1782, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241497734, "dur":271, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241497732, "dur":275, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241498026, "dur":1047, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241499102, "dur":330, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241499099, "dur":335, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241499456, "dur":1063, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241500555, "dur":189853, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241500552, "dur":189859, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1672258241690440, "dur":1243, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258239799755, "dur":8624, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1672258239808390, "dur":7741, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1672258239816160, "dur":49084, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1672258239816132, "dur":49115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1672258239865691, "dur":1135, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1672258239866921, "dur":753, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1672258239868049, "dur":12270, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1672258239880415, "dur":220, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1672258239880697, "dur":442160, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1672258240322967, "dur":188, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1672258240323428, "dur":2434, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1672258240325958, "dur":66067, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240325952, "dur":66075, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240392410, "dur":1722, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240394231, "dur":391851, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240394228, "dur":391857, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240786158, "dur":8051, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240794307, "dur":159, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Collections.LowLevel.ILSupport.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240794305, "dur":164, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240794490, "dur":916, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240795434, "dur":68547, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Burst.Cecil.Pdb.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240795432, "dur":68552, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240864016, "dur":1375, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240865426, "dur":595, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Cinemachine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240865423, "dur":601, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Cinemachine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240866048, "dur":4518, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Cinemachine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240870595, "dur":195, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240870592, "dur":199, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240870812, "dur":1181, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240872032, "dur":270, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240872029, "dur":275, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240872325, "dur":54712, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240927072, "dur":274, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.RenderPipelines.Universal.Shaders.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240927069, "dur":279, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240927369, "dur":988, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240928386, "dur":279, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240928383, "dur":284, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240928684, "dur":2346, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240931065, "dur":152, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240931061, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240931238, "dur":1407, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240932681, "dur":166, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240932678, "dur":178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240932878, "dur":1070, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240933972, "dur":559, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240933970, "dur":563, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240934553, "dur":1425, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240936003, "dur":148, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240936001, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240937638, "dur":61, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1672258240936171, "dur":1547, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240937750, "dur":609, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Burst.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240937748, "dur":613, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240938380, "dur":1980, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240940391, "dur":142, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240940388, "dur":148, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240940558, "dur":1095, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240941685, "dur":298, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240941683, "dur":301, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240942007, "dur":1115, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240943151, "dur":157, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240943148, "dur":162, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240943333, "dur":1245, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240944608, "dur":142, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240944605, "dur":146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240944774, "dur":1043, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240945843, "dur":116, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240945841, "dur":119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240946005, "dur":933, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240946964, "dur":133, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240946962, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240947116, "dur":1446, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240948590, "dur":176, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240948587, "dur":181, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240948787, "dur":953, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240949768, "dur":49642, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240949766, "dur":49646, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258240999441, "dur":1359, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241000830, "dur":181, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241000827, "dur":186, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241001032, "dur":1012, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241002073, "dur":66621, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241002070, "dur":66626, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241068720, "dur":976, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241069722, "dur":37290, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241069720, "dur":37295, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241107045, "dur":1536, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241108620, "dur":63731, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241108617, "dur":63737, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241172379, "dur":1121, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241173529, "dur":227, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241173526, "dur":232, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241173778, "dur":940, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241174744, "dur":2138, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241174741, "dur":2143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241176908, "dur":2187, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241179125, "dur":193, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241179123, "dur":197, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241179341, "dur":973, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241180343, "dur":175, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241180339, "dur":181, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241180545, "dur":1006, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241181584, "dur":443, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241181581, "dur":449, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241182051, "dur":1759, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241183842, "dur":218, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241183839, "dur":223, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241184082, "dur":978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241185089, "dur":43002, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241185087, "dur":43006, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241228118, "dur":9713, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241237869, "dur":221, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241237866, "dur":226, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241238113, "dur":8098, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241246242, "dur":42941, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241246238, "dur":42948, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241289218, "dur":1807, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241291057, "dur":33635, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241291054, "dur":33642, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241324728, "dur":1354, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241326113, "dur":339, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241326111, "dur":344, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241326477, "dur":1175, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241327680, "dur":57132, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241327677, "dur":57138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241384848, "dur":1167, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241386045, "dur":379, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241386042, "dur":384, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241386447, "dur":1246, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241387730, "dur":36060, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241387727, "dur":36066, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241423857, "dur":1086, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241424971, "dur":179, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241424969, "dur":183, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241425171, "dur":949, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241426146, "dur":34146, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241426144, "dur":34152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241460324, "dur":1268, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241461625, "dur":34823, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241461622, "dur":34828, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241496470, "dur":1240, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241497734, "dur":48724, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241497731, "dur":48729, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241546493, "dur":1204, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241547726, "dur":31685, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241547724, "dur":31690, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241579444, "dur":1524, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1672258241581034, "dur":5624, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/sharedassets5.assets.resS" }}
+,{ "pid":12345, "tid":3, "ts":1672258241586727, "dur":1071, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":3, "ts":1672258241587854, "dur":1300, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":3, "ts":1672258241589187, "dur":151, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":3, "ts":1672258241589185, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":3, "ts":1672258241589362, "dur":1210, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":3, "ts":1672258241590714, "dur":2204, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":3, "ts":1672258241592986, "dur":1196, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/level5" }}
+,{ "pid":12345, "tid":3, "ts":1672258241594240, "dur":806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/level3" }}
+,{ "pid":12345, "tid":3, "ts":1672258241595102, "dur":890, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/level1" }}
+,{ "pid":12345, "tid":3, "ts":1672258241596047, "dur":6016, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":3, "ts":1672258241602087, "dur":89753, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1672258239799852, "dur":8555, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1672258239808408, "dur":7721, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1672258239816165, "dur":165061, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1672258239816131, "dur":165097, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1672258239981250, "dur":2054, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1672258239983408, "dur":12072, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.2.1f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
+,{ "pid":12345, "tid":4, "ts":1672258239983404, "dur":12080, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1672258239995841, "dur":1107, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1672258239997046, "dur":204, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1672258239997296, "dur":3611, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1672258240001005, "dur":471, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":4, "ts":1672258240001502, "dur":398209, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":4, "ts":1672258240399816, "dur":81425, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Temp\\StagingArea\\WindowsPlayer.exe" }}
+,{ "pid":12345, "tid":4, "ts":1672258240399814, "dur":81430, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture.exe" }}
+,{ "pid":12345, "tid":4, "ts":1672258240481276, "dur":1668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture.exe" }}
+,{ "pid":12345, "tid":4, "ts":1672258240482967, "dur":194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":4, "ts":1672258240483408, "dur":66090, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":4, "ts":1672258240549599, "dur":463, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240549596, "dur":468, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240550087, "dur":1578, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240551695, "dur":655, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240551693, "dur":660, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240552378, "dur":3696, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240556102, "dur":1563, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240556099, "dur":1569, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240557696, "dur":1875, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240559606, "dur":310, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Numerics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240559603, "dur":314, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240559937, "dur":1068, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240561034, "dur":303, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Net.Http.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240561031, "dur":308, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240561360, "dur":1047, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240562464, "dur":420, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240562461, "dur":425, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240562909, "dur":1088, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240564025, "dur":167, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240564023, "dur":171, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240564214, "dur":966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240565209, "dur":212, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240565206, "dur":217, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240565444, "dur":1067, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240566539, "dur":828, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240566535, "dur":834, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240567421, "dur":1447, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240568896, "dur":198, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240568894, "dur":202, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240569117, "dur":1084, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240570235, "dur":1907, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240570233, "dur":1921, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240572180, "dur":1989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240574197, "dur":314, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Configuration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240574195, "dur":318, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240574533, "dur":1103, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240575664, "dur":472, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240575661, "dur":476, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240576155, "dur":1051, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240577233, "dur":419, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Mono.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240577231, "dur":423, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240577672, "dur":46848, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240624553, "dur":279, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\netstandard.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240624550, "dur":284, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240624856, "dur":7610, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240632500, "dur":184, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\System.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240632497, "dur":189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240632706, "dur":1086, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240633824, "dur":96062, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Burst.Cecil.Rocks.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240633821, "dur":96070, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240729924, "dur":1116, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240731073, "dur":163480, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Burst.Cecil.Mdb.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240731070, "dur":163486, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240894581, "dur":39136, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240933753, "dur":185, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240933750, "dur":189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240933958, "dur":1033, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240935020, "dur":1145, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240935017, "dur":1150, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240936216, "dur":2099, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240938346, "dur":1184, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.RenderPipelines.Universal.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240938343, "dur":1190, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240939556, "dur":1852, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240941443, "dur":154, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240941440, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240941649, "dur":1247, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240942930, "dur":634, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Collections.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240942927, "dur":639, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Collections.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240943585, "dur":1809, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Collections.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240945422, "dur":146, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240945420, "dur":149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240945592, "dur":1046, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240946669, "dur":166, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240946666, "dur":171, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240946855, "dur":1418, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240948298, "dur":941, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240948296, "dur":951, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240949273, "dur":1842, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240951144, "dur":75564, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258240951142, "dur":75569, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241026745, "dur":1877, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241028654, "dur":70270, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241028651, "dur":70276, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241098962, "dur":1102, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241100102, "dur":37866, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241100099, "dur":37871, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241137996, "dur":1852, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241139882, "dur":90738, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241139879, "dur":90743, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241230642, "dur":39745, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241270420, "dur":186, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241270417, "dur":191, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241270631, "dur":1725, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241272389, "dur":39148, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241272386, "dur":39154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241311574, "dur":1123, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241312725, "dur":386, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241312722, "dur":391, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241313166, "dur":1124, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241314316, "dur":311, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241314314, "dur":315, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241314650, "dur":1575, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241316260, "dur":33473, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241316257, "dur":33479, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241349764, "dur":1107, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241350903, "dur":155, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241350900, "dur":160, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241351080, "dur":926, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241352036, "dur":37971, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241352033, "dur":37977, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241390041, "dur":1114, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241391186, "dur":161, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241391183, "dur":166, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241391368, "dur":899, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241392294, "dur":103967, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241392291, "dur":103973, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241496321, "dur":1451, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241497803, "dur":50515, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241497801, "dur":50530, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241548354, "dur":1143, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241549526, "dur":1058, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\Documents\\GitHub\\revture\\application\\Temp\\StagingArea\\Data\\Managed\\UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241549524, "dur":1062, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241550607, "dur":1126, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1672258241551800, "dur":355, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\com.unity.services.core\\UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":4, "ts":1672258241551798, "dur":360, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":4, "ts":1672258241552528, "dur":905, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":4, "ts":1672258241553535, "dur":32548, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/StreamingAssets/splash.mov" }}
+,{ "pid":12345, "tid":4, "ts":1672258241586145, "dur":1012, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/sharedassets3.assets" }}
+,{ "pid":12345, "tid":4, "ts":1672258241587217, "dur":3304, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1672258241590612, "dur":1579, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":4, "ts":1672258241592264, "dur":1650, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/resources.assets" }}
+,{ "pid":12345, "tid":4, "ts":1672258241593981, "dur":978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/level4" }}
+,{ "pid":12345, "tid":4, "ts":1672258241595019, "dur":941, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/level2" }}
+,{ "pid":12345, "tid":4, "ts":1672258241596013, "dur":917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/level0" }}
+,{ "pid":12345, "tid":4, "ts":1672258241597000, "dur":1800, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":4, "ts":1672258241598881, "dur":1348, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":4, "ts":1672258241600260, "dur":148, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
+,{ "pid":12345, "tid":4, "ts":1672258241600258, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/Revture_Data/boot.config" }}
+,{ "pid":12345, "tid":4, "ts":1672258241600428, "dur":1047, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/Revture_Data/boot.config" }}
+,{ "pid":12345, "tid":4, "ts":1672258241601501, "dur":90276, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1672258241699632, "dur":3191, "ph":"X", "name": "ProfilerWriteOutput" }
+,

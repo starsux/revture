@@ -310,7 +310,7 @@ MonoBehaviour:
   _GAMEID: 
   _mp_character: 1
   _time_played: 
-  WaitScene: {fileID: 102900000, guid: 629c859a0269f904ead82c0d7f7de5cf, type: 3}
+  WaitScene: 2
   GrayGroup:
   - {fileID: 6531322285947145056}
   - {fileID: 8803752139090481067}
