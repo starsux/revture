@@ -25753,6 +25753,7 @@ GameObject:
   - component: {fileID: 353570914}
   - component: {fileID: 353570915}
   - component: {fileID: 353570916}
+  - component: {fileID: 353570917}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -25835,12 +25836,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FX_smoke: {fileID: 1047985051}
-  FX_slm: {fileID: 1747733170}
   CharactersSpritePath: Img/Characters
-  Normal_Collider: {fileID: 1642256228}
-  SLM_Collider: {fileID: 706590231}
-  NormalMode: 1
   CurrentCharacter: 1
+  SkillMan: {fileID: 353570917}
+  Normal_Collider: {fileID: 1642256228}
   CurrentColor: {r: 0, g: 0, b: 0, a: 0}
   Arantia: {fileID: 21300000, guid: 9329f449673a5064cac35b1e2a662a6c, type: 3}
   Arantia_SLM: {fileID: 21300000, guid: ba1e08134e323d145a1275e5de0aea41, type: 3}
@@ -25854,10 +25853,32 @@ MonoBehaviour:
   Pikun_col: {r: 0, g: 0.49389574, b: 0.8396226, a: 1}
   Ren_col: {r: 0.37946707, g: 0.6415094, b: 0.19063723, a: 1}
   Stenpek_col: {r: 0.05090782, g: 0.8301887, b: 0.7082142, a: 1}
+--- !u!114 &353570917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353570911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd1aee45bf63ec4d977dc3b5f46a086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Skills:
-  - skill: 0
+  - skill_Type: 0
     KeyActivate: 101
     unlocked: 1
+    SkillDuration: 5
+    RechargePowerTime: 0
+    PowerMaxLimit: 10
+    CurrentPowerQuant: 0
+    RechargePowerFactor: 0.1
+  NormalMode: 1
+  FX_slm: {fileID: 1747733170}
+  SLM_Collider: {fileID: 706590231}
+  _PM: {fileID: 353570916}
+  PowerBar: {fileID: 1561917923}
 --- !u!1 &359314503
 GameObject:
   m_ObjectHideFlags: 0

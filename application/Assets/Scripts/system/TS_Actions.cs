@@ -14,27 +14,21 @@ public class TS_Actions : MonoBehaviour
     public GameObject Title;
     public GameObject Buttons;
     public GameObject UINEWGAME;
+    public GameObject DofVolume;
     public TMP_InputField Input_GameName;
+    public int NameLimit;
 
     private void Start()
     {
-        // show title and buttons
-        Title.SetActive(true);
-        Buttons.SetActive(true);
+        SwitchUI(true);
 
-        // Hide ui for title game
-        UINEWGAME.SetActive(false);
     }
 
 
     public void New_Game()
     {
-        // Hide title and buttons
-        Title.SetActive(false);
-        Buttons.SetActive(false);
+        SwitchUI(false);
 
-        // Show name game 
-        UINEWGAME.SetActive(true);
     }
 
     public void GoTo_NEW_Game()
@@ -53,5 +47,40 @@ public class TS_Actions : MonoBehaviour
     public void Game_Settings()
     {
         SceneManager.LoadScene(OptionsScene);
+    }
+
+    private void Update()
+    {
+        // When player press enter key
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            GoTo_NEW_Game();
+
+        }
+
+        // When player press escape key
+        if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            SwitchUI(true);
+        }
+    }
+
+    public void SwitchUI(bool initial_ui)
+    {
+        // show title and buttons
+        Title.SetActive(initial_ui);
+        Buttons.SetActive(initial_ui);
+
+        // Hide ui for title game
+        UINEWGAME.SetActive(!initial_ui);
+        DofVolume.SetActive(!initial_ui);
+    }
+
+    public void ValidateInput()
+    {
+        if(Input_GameName.text.Length > NameLimit)
+        {
+            Input_GameName.text = Input_GameName.text.Substring(0, NameLimit);
+        }
     }
 }

@@ -97,7 +97,7 @@ public class SavedGames : MonoBehaviour
         {
             sr.gameObject.GetComponent<Image>().raycastTarget = true;
             // Calculate the new scroll position
-            float scrollDelta = Input.GetAxis("Mouse ScrollWheel");
+            float scrollDelta = Input.GetAxisRaw("Mouse ScrollWheel");
             float newScrollPosition = sr.verticalNormalizedPosition - scrollDelta;
 
             // Clamp the new scroll position between 0 and 1

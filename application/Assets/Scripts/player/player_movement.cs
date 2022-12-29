@@ -11,10 +11,12 @@ public class player_movement : MonoBehaviour
     private Transform player;
     private Vector3 dir;
     private PlayerManager _PM;
+    private PlayerSkillsManager _PSM;
 
     private void Awake()
     {
         _PM = this.gameObject.GetComponent<PlayerManager>();
+        _PSM = this.gameObject.GetComponent<PlayerSkillsManager>();
         player = this.gameObject.GetComponent<Transform>();
         Speed /= 10;
         Slime_Speed /= 10;
@@ -33,28 +35,28 @@ public class player_movement : MonoBehaviour
             PlayerSprite.flipX = true;
 
             // Flip fx
-            _PM.RotateFXSLM(xmov,ymov);
-            if (!_PM.NormalMode) _PM.FX_slm.gameObject.SetActive(true);
+            _PSM.RotateFXSLM(xmov,ymov);
+            if (!_PSM.NormalMode) _PSM.FX_slm.gameObject.SetActive(true);
 
         }
         else if(xmov > 0)
         {
             // Return to normal
             PlayerSprite.flipX = false;
-            _PM.RotateFXSLM(xmov,ymov);
+            _PSM.RotateFXSLM(xmov,ymov);
 
-            if (!_PM.NormalMode) _PM.FX_slm.gameObject.SetActive(true);
+            if (!_PSM.NormalMode) _PSM.FX_slm.gameObject.SetActive(true);
 
         }
         else
         {
             // Emite fx slime
-            if (!_PM.NormalMode) _PM.FX_slm.gameObject.SetActive(false);
+            if (!_PSM.NormalMode) _PSM.FX_slm.gameObject.SetActive(false);
         }
 
         if(ymov != 0f)
         {
-            if (!_PM.NormalMode) _PM.FX_slm.gameObject.SetActive(true);
+            if (!_PSM.NormalMode) _PSM.FX_slm.gameObject.SetActive(true);
 
         }
 
@@ -81,12 +83,12 @@ public class player_movement : MonoBehaviour
         {
             // keep normal speed
             dir /= Mathf.Sqrt(2);
-            player.transform.position += dir * _PM.GetSpeed(Speed, Slime_Speed);
+            player.transform.position += dir * _PSM.GetSpeed(Speed, Slime_Speed);
 
         }
         else
         {
-            player.transform.position += dir * _PM.GetSpeed(Speed, Slime_Speed);
+            player.transform.position += dir * _PSM.GetSpeed(Speed, Slime_Speed);
 
         }
 
