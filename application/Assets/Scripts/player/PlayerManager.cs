@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     public PlayableCharacters CurrentCharacter;
     private int CharactersMax = 0;
 
+    public Color CurrentColor;
 
     [Header("Character's sprite")]
     public Sprite Arantia;
@@ -31,8 +32,6 @@ public class PlayerManager : MonoBehaviour
     public Color Pikun_col;
     public Color Ren_col;
     public Color Stenpek_col;
-
-    public Image PowerBar;
 
     [Header("Player Skills")]
     public PlayerSkills[] Skills;
@@ -78,7 +77,7 @@ public class PlayerManager : MonoBehaviour
         GameManager.currentGame.PlayerCharacter = CurrentCharacter;
         RevtureGame.SaveAll();
 
-        Color currentColor =  Color.black;
+        CurrentColor =  Color.black;
 
         // change sprites
         switch (CurrentCharacter)
@@ -86,32 +85,31 @@ public class PlayerManager : MonoBehaviour
             case PlayableCharacters.Arantia:
                 Normal_Collider.GetComponent<SpriteRenderer>().sprite = Arantia;
                 SLM_Collider.GetComponent<SpriteRenderer>().sprite = Arantia_SLM;
-                currentColor = Arantia_col;
+                CurrentColor = Arantia_col;
                 break;
             case PlayableCharacters.Pikun:
                 Normal_Collider.GetComponent<SpriteRenderer>().sprite = Pikun;
                 SLM_Collider.GetComponent<SpriteRenderer>().sprite = Pikun_SLM;
-                currentColor = Pikun_col;
+                CurrentColor = Pikun_col;
 
                 break;
             case PlayableCharacters.Ren:
                 Normal_Collider.GetComponent<SpriteRenderer>().sprite = Ren;
                 SLM_Collider.GetComponent<SpriteRenderer>().sprite = Ren_SLM;
-                currentColor = Ren_col;
+                CurrentColor = Ren_col;
 
                 break;
             case PlayableCharacters.Stenpek:
                 Normal_Collider.GetComponent<SpriteRenderer>().sprite = Stenpek;
                 SLM_Collider.GetComponent<SpriteRenderer>().sprite = Stenpek_SLM;
-                currentColor = Stenpek_col;
+                CurrentColor = Stenpek_col;
 
                 break;
         }
 
         // Switch fx
         FX_smoke.gameObject.SetActive(CurrentCharacter == PlayableCharacters.Ren);
-        // Change color of bar
-        PowerBar.color = currentColor;
+
     }
 
     internal void RotateFXSLM(float dirx, float diry)
