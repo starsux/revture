@@ -10,6 +10,7 @@ public class WaitScreen : MonoBehaviour
     public string CinematicFileName;
     private bool CreatingGame = false;
     private string NewGameName;
+    private bool UserSkip;
 
     // Start is called before the first frame update
     void Start()
@@ -44,14 +45,31 @@ public class WaitScreen : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.anyKey)
+        {
+            
+            UserSkip = true;
+        }
+    }
+
     private void VPlayer_loopPointReached(VideoPlayer source)
     {
-        // when video ends playing load scene of game
+        // when video ends playing load scene of game with fade transition
+        //Todo: SceneTransition
             SceneManager.LoadScene("GAME");
     }
 
     private void VPlayer_frameReady(VideoPlayer source, long frameIdx)
     {
+        if (RevtureGame.CreationFinished && UserSkip)
+        {
+            RevtureGame.CreationFinished = false; // reset var
+            // Break video
+            VPlayer_loopPointReached(source);
+        }
+
         // if video playing and game is not creation
         if (source.isPlaying && !CreatingGame)
         {

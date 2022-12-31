@@ -36,6 +36,8 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
+        TestMode = false;
+
         CharactersMax = Enum.GetNames(typeof(PlayableCharacters)).Length;
 
         if (!TestMode)

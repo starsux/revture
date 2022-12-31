@@ -351,6 +351,7 @@
 "Assets/Scripts/player/PlayerSkillsManager.cs"
 "Assets/Scripts/player/player_movement.cs"
 "Assets/Scripts/player/SkillMechanics.cs"
+"Assets/Scripts/StoryControlSys.cs"
 "Assets/Scripts/system/GameManager.cs"
 "Assets/Scripts/system/GS_CARD.cs"
 "Assets/Scripts/system/SavedGames.cs"

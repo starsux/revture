@@ -53,6 +53,8 @@ public class GameManager
 
 public class RevtureGame
 {
+    public static bool CreationFinished = false;
+
     /// <summary>
     /// Path containing the stored games
     /// </summary>
@@ -65,7 +67,7 @@ public class RevtureGame
     }
 
 
-    public RevtureGame()
+    private static void CheckDirectory()
     {
         // If Storage Path folder does not exist, create it
         if (!Directory.Exists(STORAGEPATH))
@@ -79,6 +81,7 @@ public class RevtureGame
     /// </summary>
     public static RevtureGameData Generate(string game_name = "generic")
     {
+        CheckDirectory();
         // Create new class
         RevtureGameData data = new RevtureGameData();
 
@@ -97,6 +100,9 @@ public class RevtureGame
         {
             fs.Write(json);
         }
+
+        // Creation finished
+        CreationFinished = true;
 
         return data;
     }
@@ -192,6 +198,8 @@ public class RevtureGameData
     public float GameSeconds;
     // Most played character
     public PlayableCharacters MSPlayerCharacter;
+    // Persistent data for skills
+    public SkillData _skilldata;
 
     // Last player position
     public Vector3 PlayerPosition;
@@ -203,4 +211,10 @@ public class RevtureGameData
     /// </summary>
     public StoryControlSys StoryControl { get; internal set; }
     #endregion
+}
+
+[Serializable]
+public class SkillData
+{
+    public bool commit_suicide = false;
 }

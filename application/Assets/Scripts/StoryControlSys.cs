@@ -7,6 +7,11 @@ using UnityEngine;
 public class StoryControlSys
 {
     public StoryDialogCollection Diag { get; internal set; }
+    public StoryDialogCollection _Diag;
+    // Index of current point of history
+    public int StoryIndex { get; internal set; }
+    public int _StoryIndex { get; internal set; }
+
 }
 
 [Serializable]
@@ -47,7 +52,9 @@ public class StoryDialog
     }
 
     public bool Done { get; internal set; }
+    public bool _Done;
     public DialogImage Character { get; internal set; }
+    public DialogImage _Character;
     private string Raw_text;
 
     public override string ToString()

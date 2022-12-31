@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameRuntime : MonoBehaviour
@@ -13,39 +15,79 @@ public class GameRuntime : MonoBehaviour
     public KeyCode KeyMap;
     public GameObject HelpUI;
     public Dialog _dg;
+    public GameObject UIPause;
+    private PlayerManager _pm;
+    public static bool GLOBALPAUSE = false;
+    public int TitleScreenScene;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Set all playerparameters
-        player.transform.position = GameManager.currentGame.PlayerPosition;
+        _pm = player.GetComponent<PlayerManager>();
+        if (!_pm.TestMode)
+        {
+            // Set all playerparameters
+            player.transform.position = GameManager.currentGame.PlayerPosition;
+        }
+
     }
 
     private void Update()
     {
-        // Dialog
-        if (!GameManager.currentGame.StoryControl.Diag[0].Done)
+        if (!GLOBALPAUSE)
         {
-            _dg.ShowDialog(GameManager.currentGame.StoryControl.Diag[0].ToString(), GameManager.currentGame.StoryControl.Diag[0].Character);
+            if (!_pm.TestMode)
+            {
+                // Dialog
+                if (!GameManager.currentGame.StoryControl.Diag[0].Done)
+                {
+                    _dg.ShowDialog(GameManager.currentGame.StoryControl.Diag[0].ToString(), GameManager.currentGame.StoryControl.Diag[0].Character);
+                }
+            }
+
+
+            // Change color of bar
+            PowerBar.color = player.GetComponent<PlayerManager>().CurrentColor;
+            PowerBar.material.SetVector("glow_color", player.GetComponent<PlayerManager>().CurrentColor);
+            PowerBar.material.color = player.GetComponent<PlayerManager>().CurrentColor;
+
+            // Is player press KeyHelp?
+            if (Input.GetKeyUp(KeyHelp))
+            {
+                // Hide/show help
+                HelpUI.SetActive(!HelpUI.activeSelf);
+            }
+
+            // Is player press KeyMap?
+            if (Input.GetKeyUp(KeyMap))
+            {
+                Debug.Log("Big  map");
+            }
         }
 
-        // Change color of bar
-        PowerBar.color = player.GetComponent<PlayerManager>().CurrentColor;
-        PowerBar.material.SetVector("glow_color", player.GetComponent<PlayerManager>().CurrentColor);
-        PowerBar.material.color = player.GetComponent<PlayerManager>().CurrentColor;
 
-        // Is player press KeyHelp?
-        if(Input.GetKeyUp(KeyHelp)) 
+        // Is player press Key pause?
+        if (Input.GetKeyUp(KeyPause))
         {
-            // Hide/show help
-            HelpUI.SetActive(!HelpUI.activeSelf);
+            Pause();
         }
+    }
 
-        // Is player press KeyMap?
-        if (Input.GetKeyUp(KeyMap))
-        {
-            Debug.Log("Big  map");
-        }
+    public void Pause()
+    {
+        GLOBALPAUSE = !GLOBALPAUSE;
+        Time.timeScale = GLOBALPAUSE ? 0 : 1;
+        UIPause.SetActive(GLOBALPAUSE);
+    }
+
+    public void GoToTitle()
+    {
+        SceneManager.LoadScene(TitleScreenScene);
+    }
+
+    public void Settings()
+    {
+        Debug.Log("Show settings game ui/scene");
     }
 
 }

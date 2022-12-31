@@ -36,7 +36,9 @@ public class SkillMechanics : MonoBehaviour
     // The player explodes
     public void suicidio()
     {
-        Debug.Log("*explota");
+        Debug.Log("*inserte animacion de explosion");
+        GameManager.currentGame._skilldata.commit_suicide = true;
+        RevtureGame.SaveAll();
     }
 
 
