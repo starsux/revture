@@ -23,6 +23,12 @@ public class GameRuntime : MonoBehaviour
 
     private void Update()
     {
+        // Dialog
+        if (!GameManager.currentGame.StoryControl.Diag[0].Done)
+        {
+            _dg.ShowDialog(GameManager.currentGame.StoryControl.Diag[0].ToString(), GameManager.currentGame.StoryControl.Diag[0].Character);
+        }
+
         // Change color of bar
         PowerBar.color = player.GetComponent<PlayerManager>().CurrentColor;
         PowerBar.material.SetVector("glow_color", player.GetComponent<PlayerManager>().CurrentColor);

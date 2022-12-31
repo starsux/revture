@@ -197,5 +197,10 @@ public class RevtureGameData
     public Vector3 PlayerPosition;
     // Last Selected character by user in this game
     public PlayableCharacters PlayerCharacter;
+
+    /// <summary>
+    /// Information about current part of game story
+    /// </summary>
+    public StoryControlSys StoryControl { get; internal set; }
     #endregion
 }

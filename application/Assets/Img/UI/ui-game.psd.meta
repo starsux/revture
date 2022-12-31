@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -407,7 +409,7 @@ TextureImporter:
         width: 64
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -428,7 +430,7 @@ TextureImporter:
         width: 60
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -449,7 +451,7 @@ TextureImporter:
         width: 95
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -470,7 +472,7 @@ TextureImporter:
         width: 141
         height: 141
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -478,6 +480,111 @@ TextureImporter:
       bones: []
       spriteID: 3f2a4fc16e8523442ad3997d12c80b65
       internalID: 1952607564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui-game_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 810
+        width: 87
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836aa52f34c426640801284d0b376f03
+      internalID: 482028743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui-game_5
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 690
+        width: 86
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0e3b7e1a90171459115e8812bec231
+      internalID: -1523003572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Inventory_icon_bg
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 667
+        width: 127
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029c62192778a6f4c9bb2af74755716b
+      internalID: 1030823370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui-game_19
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 570
+        width: 87
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3ef553a69b2aa4c93a37d69be60294
+      internalID: 895606204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui-game_24
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 64
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ea10e2a5844a24e9edf89f54551902
+      internalID: -1680787541
       vertices: []
       indices: 
       edges: []
@@ -505,7 +612,6 @@ TextureImporter:
       ui-game_19: 895606204
       ui-game_9: -663796963
       ui-game_17: -444579216
-      ui-game_7: 1909104896
       ui-game_11: 1724319018
       ui-game_12: -1274185600
       ui-game_13: 1556251367
@@ -518,17 +624,19 @@ TextureImporter:
       ui-game_5: -1523003572
       ui-game_27: 1600400630
       ui-game_20: 404565689
+      Inventory_icon_bg: 1909104896
       ui-game_2: 1279521527
       ui-game_16: -1023312459
       ui-game_15: -605977190
+      ui-game_34: 576363931
       ui-game_3: 482028743
       ui-game_1: -1025412559
+      ui-game_33: 2108592109
       ui-game_30: 1719491369
       ui-game_22: -267161344
       ui-game_8: -1140598960
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

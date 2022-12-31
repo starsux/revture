@@ -52,7 +52,7 @@ public class TS_Actions : MonoBehaviour
     private void Update()
     {
         // When player press enter key
-        if (Input.GetKeyUp(KeyCode.Return))
+        if (Input.GetKeyUp(KeyCode.Return) && UINEWGAME.activeSelf)
         {
             GoTo_NEW_Game();
 
@@ -72,7 +72,8 @@ public class TS_Actions : MonoBehaviour
         Buttons.SetActive(initial_ui);
 
         // Hide ui for title game
-        UINEWGAME.SetActive(!initial_ui);
+        UINEWGAME.SetActive(!initial_ui); // show/hide canvas of new game creation
+        Input_GameName.Select(); // Select input
         DofVolume.SetActive(!initial_ui);
     }
 

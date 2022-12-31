@@ -5,20 +5,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
+using static StoryDialog;
 
 public class Dialog : MonoBehaviour
 {
-    public enum DialogImage
-    {
-        arantia,
-        ren,
-        pikun,
-        stenpek
-    }
 
     public TextMeshProUGUI _text;
     public Image _image;
-    public DialogImage _icon;
     public Sprite[] Icons;
     public float WriteTime;
     public float DelayToHide;
@@ -32,7 +25,12 @@ public class Dialog : MonoBehaviour
 
     }
 
-    public void ShowDialog(string message)
+    /// <summary>
+    /// Show a message on the scene
+    /// </summary>
+    /// <param name="message">Text to show as dialog</param>
+    /// <param name="_icon">Icon in dialog</param>
+    public void ShowDialog(string message, DialogImage _icon)
     {
         if (!_disposed)
         {
