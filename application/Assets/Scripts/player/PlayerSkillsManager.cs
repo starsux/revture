@@ -8,19 +8,14 @@ public class PlayerSkillsManager : MonoBehaviour
 {
     public PlayerSkills[] Skills;
     public bool NormalMode = true; // Normal/Slime
-    public ParticleSystem FX_slm;
-    public CapsuleCollider2D SLM_Collider;
     public PlayerManager _PM;
-    private PlayerSkills Current_skill = new PlayerSkills();
     public Image PowerBar;
-
-    private void Start()
-    {
-        Current_skill.skill_Type = PlayerSkills.SkillType.none;
-    }
+    public bool SkillActivated = false;
+    public SkillMechanics _mechanics;
 
     private void Update()
     {
+
         // Check all skils unlocked
         foreach (PlayerSkills sk in PlayerSkills.filter(Skills, "UNLOCKED"))
         {
@@ -35,118 +30,122 @@ public class PlayerSkillsManager : MonoBehaviour
 
     private IEnumerator RunSkill(PlayerSkills skill)
     {
-        Current_skill = skill;
-        switch(skill.skill_Type)
+        PlayerSkills.Current = skill;
+        if (!SkillActivated)
         {
-            case PlayerSkills.SkillType.slime:
-                Slime();
-                break;
+            SkillActivated = true;
+
+            _mechanics.CallSkillFunction(skill.skill_Type,skill.SkillDuration);
+
+            StartCoroutine(DrainPower(skill));
+            yield return new WaitForSeconds(skill.SkillDuration);
+
+            // End skill
+            KillSkill(skill, PlayerSkills.KillSkillMode.All);
+
+            //// Recharge skill
+            StartCoroutine(RechargePower(skill));
+
         }
+    }
 
-        StartCoroutine(UpdatePowerBar());
-        yield return new WaitForSeconds(Current_skill.SkillDuration);
+    private IEnumerator DrainPower(PlayerSkills skill)
+    {
+        float elapsedTime = 0f;
+        float fillAmountPerSecond = 1f / skill.SkillDuration;
 
-        // End skill
-        KillSkill(skill, PlayerSkills.KillSkillMode.All);
+        // Calculate amount per second for currentPowerQuant depending of fillamountPerSecond
+        float skillAmount = skill.PowerMaxLimit / skill.SkillDuration;
 
-        // Recharge skill
-        RechargePower(skill);
+        while (elapsedTime < skill.SkillDuration)
+        {
+            if (!_PM.TestMode)
+            {
+                PowerBar.fillAmount = 1 - elapsedTime * fillAmountPerSecond;
 
-        // Reset skill to none
-        Current_skill.skill_Type = PlayerSkills.SkillType.none;
+            }
+            skill.CurrentPowerQuant = float.Parse((skill.PowerMaxLimit - elapsedTime * skillAmount).ToString("F1"));
 
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
     }
 
     private void KillSkill(PlayerSkills skill, PlayerSkills.KillSkillMode mode)
     {
+        // Reset current
+        PlayerSkills.Current = null;
+
         switch (mode)
         {
             case PlayerSkills.KillSkillMode.All:
                 // Reset player to normal mode
                 NormalMode = false;
-                Slime();
+                _mechanics.slime();
+                break;
+            case PlayerSkills.KillSkillMode.Specific:
                 break;
         }
+        SkillActivated = false;
+
     }
 
-    private IEnumerator UpdatePowerBar()
+    // TODO: NOT WORK
+    public IEnumerator RechargePower(PlayerSkills skill)
     {
-        float elapsedTime = 0f;
-        float fillAmountPerSecond = 1f / Current_skill.SkillDuration;
 
-        while (elapsedTime < Current_skill.SkillDuration)
+        // Check if time is not zero
+        if (skill.RechargePowerTime != 0)
         {
-            PowerBar.fillAmount = elapsedTime * fillAmountPerSecond;
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-    }
-
-    // The player explodes
-    public void Suicidio()
-    {
-
-    }
+            float elapsedTime = 0f;
+            float skillAmount = skill.PowerMaxLimit / skill.RechargePowerTime; // Fill factor for power
+            float fillAmount = 1 / skill.RechargePowerTime; // Fill factor for power
 
 
+            while (elapsedTime < skill.SkillDuration)
+            {
+                if (!_PM.TestMode)
+                {
 
-    // Switch between slime/normal
-    public void Slime()
-    {
-        // Set as opposite of current value
-        NormalMode = !NormalMode;
+                    PowerBar.fillAmount += elapsedTime * fillAmount;
+                    if(PowerBar.fillAmount >= 1)
+                    {
+                        PowerBar.fillAmount = 1;
+                        break;
+                    }
+                }
+                skill.CurrentPowerQuant += elapsedTime * skillAmount;
 
-        if (NormalMode)
-        {
-            // Enable normal sprite
-            _PM.Normal_Collider.gameObject.SetActive(true);
+                elapsedTime += Time.deltaTime;
 
-            // disable slime sprite
-            SLM_Collider.gameObject.SetActive(false);
+                yield return null;
+            }
 
-            // Switch fx smoke
-            _PM.FX_smoke.gameObject.SetActive(_PM.CurrentCharacter == PlayableCharacters.Ren);
-
-            // Disable slime fx
-            FX_slm.gameObject.SetActive(false);
-
+            skill.CurrentPowerQuant = skill.PowerMaxLimit;
 
         }
         else
         {
-            // Disbale normal sprite
-            _PM.Normal_Collider.gameObject.SetActive(false);
+            // If the recharge time is zero, immediately set the progress bar to full and the power to the max limit
+            if (!_PM.TestMode)
+            {
+                PowerBar.fillAmount = 1;
 
-            // Enable slime sprite
-            SLM_Collider.gameObject.SetActive(true);
-
-            // Off smoke effect
-            _PM.FX_smoke.gameObject.SetActive(false);
-
+            }
+            skill.CurrentPowerQuant = skill.PowerMaxLimit;
         }
-    }
 
-    public void RechargePower(PlayerSkills skill)
-    {
-        StartCoroutine(RechargePowerSleep(skill));
-    }
-
-    private IEnumerator RechargePowerSleep(PlayerSkills skill)
-    {
-        float elapsedTime = 0f;
-
-        while (elapsedTime < skill.RechargePowerTime)
-        {
-            skill.CurrentPowerQuant = elapsedTime * skill.RechargePowerFactor;
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
     }
 
 
+    #region partials
     public void RotateFXSLM(float dirx, float diry)
     {
-        FX_slm.gameObject.transform.rotation = Quaternion.LookRotation(new Vector3(dirx, diry));
+        if (!NormalMode)
+        {
+            _mechanics.FX_slm.gameObject.transform.rotation = Quaternion.LookRotation(new Vector3(0, diry, dirx));
+
+        }
 
     }
 
@@ -161,6 +160,7 @@ public class PlayerSkillsManager : MonoBehaviour
         if (NormalMode) return speed;
         else return slime_Speed;
     }
+    #endregion
 }
 
 [Serializable]
@@ -178,7 +178,7 @@ public class PlayerSkills
         slime,
         suicidio,
         composer,
-        CyclicBullet
+        cyclicBullet
     }
 
     public SkillType skill_Type;
@@ -188,7 +188,7 @@ public class PlayerSkills
     public float RechargePowerTime;
     public float PowerMaxLimit;
     [HideInInspector] public float CurrentPowerQuant;
-    public float RechargePowerFactor = 0.1f;
+    public static PlayerSkills Current = null;
 
     internal static IEnumerable<PlayerSkills> filter(PlayerSkills[] skills, string v)
     {

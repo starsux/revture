@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 1c86331a7eb899b48987927f6d981bdc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -311,6 +311,7 @@ MonoBehaviour:
   _mp_character: 1
   _time_played: 
   WaitScene: 2
+  _mng: {fileID: 0}
   GrayGroup:
   - {fileID: 6531322285947145056}
   - {fileID: 8803752139090481067}
@@ -319,6 +320,7 @@ MonoBehaviour:
   GameNameText: {fileID: 6996527610127799711}
   GameStatsText: {fileID: 6781825250487658251}
   banner: {fileID: 8803752139090481067}
+  IncreasingFactor: 1.1
 --- !u!114 &1430045227692560983
 MonoBehaviour:
   m_ObjectHideFlags: 0

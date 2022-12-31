@@ -2,22 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SavedGames : MonoBehaviour
 {
+    public KeyCode ReturnKey;
     public ScrollRect sr;
     public RectTransform Canvas_Screen;
     public GameObject CardPrefab;
     public GameObject CardMessage;
     public RectTransform RTCardContainer;
-    public float IncreasingFactor = 1;
+    public Material gry;
 
     public static int CardSelected = 0;
     public static List<GameObject> Cards;
     private Vector3 DefaultCardSize;
     private float scrollOffset;
-    public Material gry;
+    public int ReturnSceneIndex;
 
 
     // Start is called before the first frame update
@@ -68,10 +70,10 @@ public class SavedGames : MonoBehaviour
 
     }
 
-    private void ApplyGrayScale(GameObject o,bool v)
+    public void ApplyGrayScale(GameObject o, bool v)
     {
         var ToApplyGray = o.GetComponent<GS_CARD>().GrayGroup;
-        foreach(var i in ToApplyGray)
+        foreach (var i in ToApplyGray)
         {
             if (v)
             {
@@ -111,43 +113,11 @@ public class SavedGames : MonoBehaviour
     void Update()
     {
 
-        // Are there cards found?
-        if (Cards != null)
+        if (Input.GetKeyUp(ReturnKey))
         {
-
-            //! On mouse wheel, set card as selected !
-            List<RaycastResult> raycast_cards = new List<RaycastResult>(); // results of canvas raycast
-            PointerEventData ped = new PointerEventData(EventSystem.current); // Store for modify current pointer ed
-            ped.position = Canvas_Screen.sizeDelta / 2; // Set pointer position in middle of screen
-            EventSystem.current.RaycastAll(ped, raycast_cards); // raycast for get card in middle of screen
-
-            foreach (var i in raycast_cards)
-            {
-                // current g.o. is a card?
-                if (i.gameObject.CompareTag("UICARD"))
-                {
-                    // This is the current card, then
-                    CardSelected = Cards.IndexOf(i.gameObject);
-                }
-            }
-
-            // Increase size of selected card
-            Cards[CardSelected].GetComponent<RectTransform>().localScale = new Vector3(IncreasingFactor, IncreasingFactor, IncreasingFactor);
-            ApplyGrayScale(Cards[CardSelected], false);
-
-
-            // Decrease other cards
-            foreach (var i in Cards)
-            {
-                //Is current different of selected?
-                if (i != Cards[CardSelected])
-                {
-                    i.GetComponent<RectTransform>().localScale = DefaultCardSize;
-                    ApplyGrayScale(i, true);
-
-                }
-            }
+            SceneManager.LoadScene(ReturnSceneIndex);
         }
+
     }
 
 
