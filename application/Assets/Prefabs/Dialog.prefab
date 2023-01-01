@@ -94,8 +94,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _text: {fileID: 6930774621392630239}
   _image: {fileID: 6930774622476010258}
-  _icon: 0
   Icons:
+  - {fileID: 21300000, guid: df38fc9ff85628a438e0e1ea7c3efb36, type: 3}
+  - {fileID: 21300000, guid: df38fc9ff85628a438e0e1ea7c3efb36, type: 3}
+  - {fileID: 21300000, guid: df38fc9ff85628a438e0e1ea7c3efb36, type: 3}
   - {fileID: 21300000, guid: df38fc9ff85628a438e0e1ea7c3efb36, type: 3}
   WriteTime: 5
   DelayToHide: 3

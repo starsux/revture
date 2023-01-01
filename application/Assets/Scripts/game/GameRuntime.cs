@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,12 +10,18 @@ public class GameRuntime : MonoBehaviour
     public KeyCode KeyPause;
     public KeyCode KeyHelp;
     public KeyCode KeyMap;
+    public KeyCode KeyInventory;
     public GameObject HelpUI;
     public Dialog _dg;
     public GameObject UIPause;
     private PlayerManager _pm;
     public static bool GLOBALPAUSE = false;
     public int TitleScreenScene;
+
+    public GameObject Icon_arantia;
+    public GameObject Icon_stenpek;
+    public GameObject Icon_ren;
+    public GameObject Icon_pikun;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,7 @@ public class GameRuntime : MonoBehaviour
 
     private void Update()
     {
+
         if (!GLOBALPAUSE)
         {
             if (!_pm.TestMode)
@@ -41,7 +45,7 @@ public class GameRuntime : MonoBehaviour
                 // Dialog
                 if (!GameManager.currentGame.StoryControl.Diag[0].Done)
                 {
-                    _dg.ShowDialog(GameManager.currentGame.StoryControl.Diag[0].ToString(), GameManager.currentGame.StoryControl.Diag[0].Character);
+                    _dg.ShowDialog(GameManager.currentGame.StoryControl.Diag[0], GameManager.currentGame.StoryControl.Diag[0].Character);
                 }
             }
 
@@ -69,19 +73,24 @@ public class GameRuntime : MonoBehaviour
         // Is player press Key pause?
         if (Input.GetKeyUp(KeyPause))
         {
-            Pause();
+            SetPause(!GLOBALPAUSE);
         }
     }
 
-    public void Pause()
+    /// <summary>
+    /// Switch between pause or resume
+    /// Set scale of time to zero for physics
+    /// </summary>
+    public void SetPause(bool pause)
     {
-        GLOBALPAUSE = !GLOBALPAUSE;
-        Time.timeScale = GLOBALPAUSE ? 0 : 1;
-        UIPause.SetActive(GLOBALPAUSE);
+        GLOBALPAUSE = pause;
+        Time.timeScale = pause ? 0 : 1;
+        UIPause.SetActive(pause);
     }
 
     public void GoToTitle()
     {
+        SetPause(false);
         SceneManager.LoadScene(TitleScreenScene);
     }
 

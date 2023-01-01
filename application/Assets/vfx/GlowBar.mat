@@ -45,7 +45,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.05090782, g: 0.8301887, b: 0.7082142, a: 1}
     - _glow_color: {r: Infinity, g: Infinity, b: Infinity, a: Infinity}
   m_BuildTextureStacks: []
 --- !u!114 &2998018010654554286

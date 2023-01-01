@@ -31,6 +31,8 @@ public class GameManager
 
     public static List<RevtureGameData> RetrieveAllStoredGames()
     {
+        RevtureGame.CheckDirectory();
+
         // Get  all files in game storage path
         string[] files = Directory.GetFiles(RevtureGame.STORAGEPATH);
 
@@ -67,7 +69,7 @@ public class RevtureGame
     }
 
 
-    private static void CheckDirectory()
+    public static void CheckDirectory()
     {
         // If Storage Path folder does not exist, create it
         if (!Directory.Exists(STORAGEPATH))
@@ -159,6 +161,22 @@ public class RevtureGame
         File.WriteAllText(file_path, json);
 
     }
+
+
+    /// <summary>
+    ///  Save all data modified in specific game
+    /// </summary>
+    public static void SaveAll(RevtureGameData revdata)
+    {
+        // Convert Object to json
+        string json = JsonUtility.ToJson(revdata);
+
+        // Save in device
+        string file_path = STORAGEPATH + revdata.GAME_ID;
+
+        File.WriteAllText(file_path, json);
+
+    }
 }
 // Data for create serializable class
 [Serializable]
@@ -199,7 +217,7 @@ public class RevtureGameData
     // Most played character
     public PlayableCharacters MSPlayerCharacter;
     // Persistent data for skills
-    public SkillData _skilldata;
+    public SkillData _skilldata = new SkillData();
 
     // Last player position
     public Vector3 PlayerPosition;
@@ -209,12 +227,32 @@ public class RevtureGameData
     /// <summary>
     /// Information about current part of game story
     /// </summary>
-    public StoryControlSys StoryControl { get; internal set; }
+    public StoryControlSys StoryControl = new StoryControlSys();
     #endregion
 }
 
 [Serializable]
 public class SkillData
 {
-    public bool commit_suicide = false;
+    public List<PlayableCharacters> characterSuicided = new List<PlayableCharacters>();
+
+    /// <summary>
+    /// Check if a specific character has suicided
+    /// </summary>
+    /// <param name="c"></param>
+    /// <returns></returns>
+    internal bool CharacterSuicidedState(PlayableCharacters c)
+    {
+        return characterSuicided.Contains(c);
+
+    }
+
+    /// <summary>
+    /// Check if exists characters suicided
+    /// </summary>
+    /// <returns></returns>
+    internal bool CharactersSuicided()
+    {
+        return characterSuicided.Count > 0;
+    }
 }

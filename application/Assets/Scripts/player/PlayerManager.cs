@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -53,21 +50,27 @@ public class PlayerManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
+    {
+
         // User tries to switch character?
-        for(int i=1; i<CharactersMax+1; i++)
+        for (int i = 1; i < CharactersMax + 1; i++)
         {
-            
+
             if (Input.GetKeyUp(i.ToString()))
             {
-                SwitchCharacter(i-1);
+                SwitchCharacter(i - 1);
 
             }
         }
     }
 
-    private void SwitchCharacter(int indexEnum)
+    public void SwitchCharacter(int indexEnum)
     {
+        // Check if pause is true
+        if (GameRuntime.GLOBALPAUSE) return;
+
+        // If character to switch has suicide return
+        if (GameManager.currentGame._skilldata.CharacterSuicidedState((PlayableCharacters)indexEnum)) return;
 
         // Toggle to normal mode
         SkillMan.NormalMode = false;
@@ -84,7 +87,7 @@ public class PlayerManager : MonoBehaviour
         }
 
 
-        CurrentColor =  Color.black;
+        CurrentColor = Color.black;
 
         // change sprites
         switch (CurrentCharacter)
@@ -113,5 +116,10 @@ public class PlayerManager : MonoBehaviour
         // Switch fx
         FX_smoke.gameObject.SetActive(CurrentCharacter == PlayableCharacters.Ren);
 
+    }
+
+    internal int CharacterIndex(PlayableCharacters charc)
+    {
+        return (int)charc;
     }
 }

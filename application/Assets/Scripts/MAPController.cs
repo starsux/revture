@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MAPController : MonoBehaviour
 {
@@ -11,7 +8,7 @@ public class MAPController : MonoBehaviour
     private void Update()
     {
         // Set zoom
-        ImageMap.localScale = new Vector2(zoom,zoom);
+        ImageMap.localScale = new Vector2(zoom, zoom);
 
 
     }

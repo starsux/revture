@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -49,7 +46,7 @@ public class WaitScreen : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            
+
             UserSkip = true;
         }
     }
@@ -58,7 +55,7 @@ public class WaitScreen : MonoBehaviour
     {
         // when video ends playing load scene of game with fade transition
         //Todo: SceneTransition
-            SceneManager.LoadScene("GAME");
+        SceneManager.LoadScene("GAME");
     }
 
     private void VPlayer_frameReady(VideoPlayer source, long frameIdx)
@@ -76,7 +73,7 @@ public class WaitScreen : MonoBehaviour
             // Set flag true
             CreatingGame = true;
             // Create game
-            GameManager.CreateNewGame( NewGameName );
+            GameManager.CreateNewGame(NewGameName);
         }
 
     }

@@ -1,9 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.U2D;
 using UnityEngine.UI;
 using static StoryDialog;
 
@@ -30,23 +27,24 @@ public class Dialog : MonoBehaviour
     /// </summary>
     /// <param name="message">Text to show as dialog</param>
     /// <param name="_icon">Icon in dialog</param>
-    public void ShowDialog(string message, DialogImage _icon)
+    public void ShowDialog(StoryDialog sg, DialogImage _icon)
     {
         if (!_disposed)
         {
             _disposed = true;
             this.gameObject.SetActive(true);
             _image.sprite = GetSprite(_icon);
-            StartCoroutine(WriteText(message));
+            sg.Done = true;
+            StartCoroutine(WriteText(sg.ToString()));
         }
 
     }
 
     private Sprite GetSprite(DialogImage icon)
     {
-        foreach(Sprite sprite in Icons)
+        foreach (Sprite sprite in Icons)
         {
-            
+
 
             if (sprite.name.Split("_")[1] == icon.ToString())
             {
@@ -59,13 +57,13 @@ public class Dialog : MonoBehaviour
     private IEnumerator WriteText(string msg)
     {
         float elapsedTime = 0f;
-        float letterQuant = msg.Length-1 / WriteTime;
+        float letterQuant = msg.Length - 1 / WriteTime;
         int LetterLast = 0;
 
         while (elapsedTime < WriteTime)
         {
             elapsedTime += Time.deltaTime;
-            LetterLast = Mathf.FloorToInt(elapsedTime*letterQuant);
+            LetterLast = Mathf.FloorToInt(elapsedTime * letterQuant);
             LetterLast = LetterLast > msg.Length ? msg.Length : LetterLast;
             _text.text = msg.Substring(0, LetterLast);
 

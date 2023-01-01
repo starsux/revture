@@ -1,5 +1,5 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 
 [ExecuteInEditMode, ImageEffectAllowedInSceneView]
 public class DepthOfFieldEffect : MonoBehaviour

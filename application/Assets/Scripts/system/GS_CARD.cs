@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,6 +12,7 @@ public class GS_CARD : MonoBehaviour
     public int WaitScene;
     public SavedGames _mng;
 
+
     [SerializeField] public Image[] GrayGroup;
 
     public TextMeshProUGUI GameNameText;
@@ -22,12 +20,13 @@ public class GS_CARD : MonoBehaviour
     public Image banner;
 
     public float IncreasingFactor = 1;
+    public float DecreaseFactor = 1;
 
     private void Awake()
     {
         GameObject[] mangs = GameObject.FindGameObjectsWithTag("MANAGER");
 
-        foreach(var m in mangs)
+        foreach (var m in mangs)
         {
             if (m.TryGetComponent(out _mng)) break;
         }
@@ -40,29 +39,24 @@ public class GS_CARD : MonoBehaviour
         GameStatsText.text = _time_played;
     }
 
-    private void Update()
+    public void Increase()
     {
-        if (InRangeCenterSquare(this.transform.position, 2))
-        {
-            // Set card as selected
-            SavedGames.CardSelected = SavedGames.Cards.IndexOf(this.gameObject);
-            // Increase size of selected card
-            this.gameObject.GetComponent<RectTransform>().localScale = new Vector3(IncreasingFactor, IncreasingFactor, IncreasingFactor);
-            _mng.ApplyGrayScale(this.gameObject, false);
+        // Increase size of selected card
+        this.gameObject.GetComponent<RectTransform>().localScale = new Vector3(IncreasingFactor, IncreasingFactor, IncreasingFactor);
+        _mng.ApplyGrayScale(this.gameObject, false);
+    }
 
-        }
-        else
-        {
-            // Return to normal state
-            this.gameObject.GetComponent<RectTransform>().localScale = Vector3.one;
-            _mng.ApplyGrayScale(this.gameObject, true);
-        }
+    public void Normal()
+    {
+        // Return to normal state
+        this.gameObject.GetComponent<RectTransform>().localScale = new Vector3(DecreaseFactor, DecreaseFactor, DecreaseFactor);
+        _mng.ApplyGrayScale(this.gameObject, true);
     }
 
     // Check if position is in range of sqaure
     private bool InRangeCenterSquare(Vector3 position, int v)
     {
-        if(position.x <= v && position.x >= v*-1)
+        if (position.x <= v && position.x >= v * -1)
         {
             if (position.y <= v && position.y >= v * -1)
             {
@@ -73,11 +67,16 @@ public class GS_CARD : MonoBehaviour
         return false;
     }
 
+    private void OnMouseUp()
+    {
+        LaunchGame();
+    }
+
     public void LaunchGame()
     {
         // Go to game of current card
         // // Set status for waitScreen (Action;Game ID)
-        TS_Actions.WStatus = "LOADGAME;" + SavedGames.Cards[SavedGames.CardSelected].GetComponent<GS_CARD>()._GAMEID;
+        TS_Actions.WStatus = "LOADGAME;" + SavedGames.Cards[SavedGames.Cards.IndexOf(this.gameObject)].GetComponent<GS_CARD>()._GAMEID;
         // Go to wait screen
         SceneManager.LoadScene(WaitScene);
 

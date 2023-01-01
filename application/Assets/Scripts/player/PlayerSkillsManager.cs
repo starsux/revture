@@ -6,15 +6,55 @@ using UnityEngine.UI;
 
 public class PlayerSkillsManager : MonoBehaviour
 {
+
     public PlayerSkills[] Skills;
     public bool NormalMode = true; // Normal/Slime
     public PlayerManager _PM;
     public Image PowerBar;
     public bool SkillActivated = false;
     public SkillMechanics _mechanics;
+    private GameRuntime _GM;
+
+    private void Awake()
+    {
+        _GM = GameObject.FindGameObjectWithTag("MANAGER").GetComponent<GameRuntime>();
+    }
+
+    private void Start()
+    {
+        UpdateSuicidedIcons();
+    }
+
+    public void UpdateSuicidedIcons()
+    {
+        if (GameManager.currentGame._skilldata.CharactersSuicided())
+        {
+            foreach (var c in GameManager.currentGame._skilldata.characterSuicided)
+            {
+                GetSuicideIcon(c).SetActive(false);
+
+            }
+        }
+    }
+
+    private GameObject GetSuicideIcon(PlayableCharacters characterSuicided)
+    {
+        switch (characterSuicided)
+        {
+            case PlayableCharacters.Arantia: return _GM.Icon_arantia;
+            case PlayableCharacters.Ren: return _GM.Icon_ren;
+            case PlayableCharacters.Pikun: return _GM.Icon_pikun;
+            case PlayableCharacters.Stenpek: return _GM.Icon_stenpek;
+        }
+
+        return null;
+    }
 
     private void Update()
     {
+        // If global pause is true disable skills
+        if (GameRuntime.GLOBALPAUSE) return;
+
 
         // Check all skils unlocked
         foreach (PlayerSkills sk in PlayerSkills.filter(Skills, "UNLOCKED"))
@@ -28,6 +68,22 @@ public class PlayerSkillsManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Check if exists enabled restriction for skill activations
+    /// </summary>
+    /// <returns>True if exists restriccions</returns>
+    public bool ActivationRestrictions(PlayerSkills.SkillType skill)
+    {
+        switch (skill)
+        {
+            case PlayerSkills.SkillType.suicidio:
+                return GameManager.currentGame._skilldata.characterSuicided.Count == Enum.GetValues(typeof(PlayableCharacters)).Length - 1;
+
+        }
+
+        return false;
+    }
+
     private IEnumerator RunSkill(PlayerSkills skill)
     {
         PlayerSkills.Current = skill;
@@ -35,7 +91,7 @@ public class PlayerSkillsManager : MonoBehaviour
         {
             SkillActivated = true;
 
-            _mechanics.CallSkillFunction(skill.skill_Type,skill.SkillDuration);
+            _mechanics.CallSkillFunction(skill.skill_Type, skill.SkillDuration);
 
             StartCoroutine(DrainPower(skill));
             yield return new WaitForSeconds(skill.SkillDuration);
@@ -51,6 +107,8 @@ public class PlayerSkillsManager : MonoBehaviour
 
     private IEnumerator DrainPower(PlayerSkills skill)
     {
+        if (ActivationRestrictions(PlayerSkills.SkillType.suicidio)) yield break;
+
         float elapsedTime = 0f;
         float fillAmountPerSecond = 1f / skill.SkillDuration;
 
@@ -108,7 +166,7 @@ public class PlayerSkillsManager : MonoBehaviour
                 {
 
                     PowerBar.fillAmount += elapsedTime * fillAmount;
-                    if(PowerBar.fillAmount >= 1)
+                    if (PowerBar.fillAmount >= 1)
                     {
                         PowerBar.fillAmount = 1;
                         break;

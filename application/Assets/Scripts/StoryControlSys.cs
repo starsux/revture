@@ -1,28 +1,25 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 [Serializable]
 public class StoryControlSys
 {
-    public StoryDialogCollection Diag { get; internal set; }
-    public StoryDialogCollection _Diag;
+    public StoryDialogCollection Diag = new StoryDialogCollection();
     // Index of current point of history
-    public int StoryIndex { get; internal set; }
-    public int _StoryIndex { get; internal set; }
+    public int StoryIndex;
+
+    public StoryControlSys()
+    {
+        // Here all dialogs
+        Diag.Add("This is a test text dialog, this only show once in all game", StoryDialog.DialogImage.arantia);
+    }
 
 }
 
 [Serializable]
 public class StoryDialogCollection
 {
-    private List<StoryDialog> dialogs;
-
-    public StoryDialogCollection() 
-    {
-        dialogs = new List<StoryDialog>();
-    }
+    public List<StoryDialog> dialogs = new();
 
     public StoryDialog this[int index]
     {
@@ -33,10 +30,14 @@ public class StoryDialogCollection
 
         set
         {
-            dialogs[index] = value; 
+            dialogs[index] = value;
         }
     }
 
+    internal void Add(string Raw_text, StoryDialog.DialogImage Character)
+    {
+        dialogs.Add(new StoryDialog(Raw_text, Character));
+    }
 }
 
 
@@ -51,11 +52,16 @@ public class StoryDialog
         stenpek
     }
 
-    public bool Done { get; internal set; }
-    public bool _Done;
-    public DialogImage Character { get; internal set; }
-    public DialogImage _Character;
+    public bool Done { get { return _done; } set { _done = value; } }
+    public bool _done = false;
+    public DialogImage Character;
     private string Raw_text;
+
+    public StoryDialog(string raw_text, DialogImage character)
+    {
+        Raw_text = raw_text;
+        Character = character;
+    }
 
     public override string ToString()
     {

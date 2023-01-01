@@ -493,7 +493,7 @@ TextureImporter:
         width: 87
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -514,7 +514,7 @@ TextureImporter:
         width: 86
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -535,7 +535,7 @@ TextureImporter:
         width: 127
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -556,7 +556,7 @@ TextureImporter:
         width: 87
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -569,13 +569,55 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui-game_24
+      name: ui-game_7
       rect:
         serializedVersion: 2
-        x: 903
-        y: 64
-        width: 4
-        height: 4
+        x: 275
+        y: 718
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33116291ada5d014c85c679d806aeb44
+      internalID: -263740247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui-game_20
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 601
+        width: 77
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9270c65e11460b74c9ac6065898997cf
+      internalID: 404565689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui-game_21
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 601
+        width: 51
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -583,8 +625,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92ea10e2a5844a24e9edf89f54551902
-      internalID: -1680787541
+      spriteID: 161e25d210b386e42a9fb6f68bf6e32e
+      internalID: -239773504
       vertices: []
       indices: 
       edges: []
@@ -612,6 +654,7 @@ TextureImporter:
       ui-game_19: 895606204
       ui-game_9: -663796963
       ui-game_17: -444579216
+      ui-game_7: -263740247
       ui-game_11: 1724319018
       ui-game_12: -1274185600
       ui-game_13: 1556251367

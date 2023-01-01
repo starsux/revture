@@ -1,24 +1,18 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class SavedGames : MonoBehaviour
 {
     public KeyCode ReturnKey;
-    public ScrollRect sr;
     public RectTransform Canvas_Screen;
     public GameObject CardPrefab;
     public GameObject CardMessage;
     public RectTransform RTCardContainer;
     public Material gry;
 
-    public static int CardSelected = 0;
     public static List<GameObject> Cards;
     private Vector3 DefaultCardSize;
-    private float scrollOffset;
     public int ReturnSceneIndex;
 
 
@@ -47,18 +41,12 @@ public class SavedGames : MonoBehaviour
                 System.TimeSpan tsp = System.TimeSpan.FromSeconds(c.GameSeconds);
                 // Fromat and set time
                 tempcard.GetComponent<GS_CARD>()._time_played = tsp.Minutes + ":" + tsp.Seconds;
-                ApplyGrayScale(tempcard,true);
+                ApplyGrayScale(tempcard, true);
                 Cards.Add(tempcard);
             }
 
             // Store current card size
             DefaultCardSize = Cards[0].GetComponent<RectTransform>().localScale;
-            scrollOffset = Cards.Count * 1.2f;
-            // update scroll limits
-            RTCardContainer.sizeDelta = new Vector2(150 * scrollOffset, RTCardContainer.sizeDelta.y);
-
-            // Move scroll to first card
-            sr.normalizedPosition = new Vector2(0.5f,0);
         }
         else
         {
@@ -69,6 +57,7 @@ public class SavedGames : MonoBehaviour
 
 
     }
+
 
     public void ApplyGrayScale(GameObject o, bool v)
     {
@@ -87,28 +76,6 @@ public class SavedGames : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        // Is user scrolling?
-        if (Input.GetAxis("Mouse ScrollWheel") == 0)
-        {
-            // Wait until scroll was zero
-            sr.gameObject.GetComponent<Image>().raycastTarget = false;
-        }
-        else
-        {
-            sr.gameObject.GetComponent<Image>().raycastTarget = true;
-            // Calculate the new scroll position
-            float scrollDelta = Input.GetAxisRaw("Mouse ScrollWheel");
-            float newScrollPosition = sr.verticalNormalizedPosition - scrollDelta;
-
-            // Clamp the new scroll position between 0 and 1
-            newScrollPosition = Mathf.Clamp(newScrollPosition, 0, 1);
-
-            // Set the scroll position
-            sr.verticalNormalizedPosition = newScrollPosition;
-        }
-    }
 
     void Update()
     {

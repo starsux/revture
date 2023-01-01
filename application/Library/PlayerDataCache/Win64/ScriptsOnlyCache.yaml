@@ -135,7 +135,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
     - UnityEngine.UI.RectMask2D
-    - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Assembly-CSharp:
@@ -209,12 +208,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
-    methodName: OnScrollbarClicked
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
-    methodName: OnScrollbarClicked
-  - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
     methodName: OnIncrement
   - assembly: Unity.RenderPipelines.Core.Runtime
@@ -226,6 +219,12 @@ ScriptsOnlyBuild:
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
     methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
+    methodName: OnScrollbarClicked
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
+    methodName: OnScrollbarClicked
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
     methodName: OnDecrement
@@ -246,6 +245,9 @@ ScriptsOnlyBuild:
     methodName: Continue_Game
   - assembly: Assembly-CSharp
     fullTypeName: TS_Actions
+    methodName: Cancel
+  - assembly: Assembly-CSharp
+    fullTypeName: TS_Actions
     methodName: New_Game
   - assembly: Assembly-CSharp
     fullTypeName: TS_Actions
@@ -261,25 +263,52 @@ ScriptsOnlyBuild:
     methodName: LaunchGame
   - assembly: Assembly-CSharp
     fullTypeName: GS_CARD
-    methodName: LaunchGame
+    methodName: Normal
+  - assembly: Assembly-CSharp
+    fullTypeName: GS_CARD
+    methodName: Increase
   - assembly: Assembly-CSharp
     fullTypeName: GS_CARD
     methodName: LaunchGame
   - assembly: Assembly-CSharp
     fullTypeName: GS_CARD
-    methodName: LaunchGame
+    methodName: Normal
+  - assembly: Assembly-CSharp
+    fullTypeName: GS_CARD
+    methodName: Increase
   - assembly: Assembly-CSharp
     fullTypeName: GS_CARD
     methodName: LaunchGame
   - assembly: Assembly-CSharp
     fullTypeName: GS_CARD
+    methodName: Normal
+  - assembly: Assembly-CSharp
+    fullTypeName: GS_CARD
+    methodName: Increase
+  - assembly: Assembly-CSharp
+    fullTypeName: GS_CARD
     methodName: LaunchGame
+  - assembly: Assembly-CSharp
+    fullTypeName: GS_CARD
+    methodName: Normal
+  - assembly: Assembly-CSharp
+    fullTypeName: GS_CARD
+    methodName: Increase
+  - assembly: Assembly-CSharp
+    fullTypeName: GS_CARD
+    methodName: LaunchGame
+  - assembly: Assembly-CSharp
+    fullTypeName: GS_CARD
+    methodName: Normal
+  - assembly: Assembly-CSharp
+    fullTypeName: GS_CARD
+    methodName: Increase
   - assembly: Assembly-CSharp
     fullTypeName: GameRuntime
     methodName: Settings
   - assembly: Assembly-CSharp
     fullTypeName: GameRuntime
-    methodName: Pause
+    methodName: SetPause
   - assembly: Assembly-CSharp
     fullTypeName: GameRuntime
     methodName: GoToTitle
@@ -461,8 +490,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11914}
     - Class: 114
       Script: {instanceID: 12578}
-    - Class: 114
-      Script: {instanceID: 12892}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -636,23 +663,19 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1750}
+    - Class: 114
       Script: {instanceID: 1756}
     - Class: 114
       Script: {instanceID: 1758}
     - Class: 114
       Script: {instanceID: 1908}
     - Class: 114
-      Script: {instanceID: 2048}
-    - Class: 114
       Script: {instanceID: 3200}
-    - Class: 114
-      Script: {instanceID: 4866}
     - Class: 114
       Script: {instanceID: 5012}
     - Class: 114
       Script: {instanceID: 5774}
-    - Class: 114
-      Script: {instanceID: 7392}
     - Class: 114
       Script: {instanceID: 8610}
     - Class: 114
@@ -1025,7 +1048,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 1a1ed5c4a387d0f9b6d7b83fe18a4c7d
+      Hash: bc8660fc6a203b11bb67eb573788cf7d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameRuntime
@@ -1289,7 +1312,7 @@ ScriptsOnlyBuild:
     className: GridInformation
   - hash:
       serializedVersion: 2
-      Hash: bc82b7f810f73254dd2e94815d6447c8
+      Hash: e863143a366b892b14ffa664ce8f19d1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: TS_Actions
@@ -1307,7 +1330,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionEnter2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: bea9b2b09cb1caf8ed3d0d7f0472fe34
+      Hash: d3357dfe6ef8a1ce8fc904091117b341
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SavedGames
@@ -1943,7 +1966,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 9ddd47c074425a273461d61a731a9f51
+      Hash: b26934545b2eacc9f2cbf83e6c8be2f1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GS_CARD
