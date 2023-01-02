@@ -12,6 +12,7 @@ public class StoryControlSys
     {
         // Here all dialogs
         Diag.Add("This is a test text dialog, this only show once in all game", StoryDialog.DialogImage.arantia);
+        Diag.Add("The exit from the cave is very narrow, use the transmuter. (Press E)", StoryDialog.DialogImage.stenpek);
     }
 
 }

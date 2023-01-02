@@ -40,14 +40,14 @@ public class SkillMechanics : MonoBehaviour
         // If there is activation restrictions for this skill then return
         if (_PMS.ActivationRestrictions(PlayerSkills.SkillType.suicidio)) return;
         Debug.Log("*inserte animacion de explosion");
-        GameManager.currentGame._skilldata.characterSuicided.Add(_PM.CurrentCharacter);
+        PlayerSkills.GetSkill(PlayerSkills.SkillType.suicidio,GameManager.currentGame._skilldata).characterSuicided.Add(_PM.CurrentCharacter);
         RevtureGame.SaveAll();
         int nextIndex = -1;
         // Get index of next character alive
         foreach (PlayableCharacters c in Enum.GetValues(typeof(PlayableCharacters)))
         {
             // is current character alive?
-            if (!GameManager.currentGame._skilldata.characterSuicided.Contains(c))
+            if (!PlayerSkills.GetSkill(PlayerSkills.SkillType.suicidio, GameManager.currentGame._skilldata).characterSuicided.Contains(c))
             {
                 nextIndex = _PM.CharacterIndex(c);
                 break;
@@ -63,7 +63,7 @@ public class SkillMechanics : MonoBehaviour
     {
         foreach (var i in GameManager.RetrieveAllStoredGames())
         {
-            i._skilldata.characterSuicided = new System.Collections.Generic.List<PlayableCharacters>();
+            PlayerSkills.GetSkill(PlayerSkills.SkillType.suicidio, i._skilldata).characterSuicided = new System.Collections.Generic.List<PlayableCharacters>();
             RevtureGame.SaveAll(i);
         }
 

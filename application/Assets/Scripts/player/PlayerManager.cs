@@ -70,7 +70,7 @@ public class PlayerManager : MonoBehaviour
         if (GameRuntime.GLOBALPAUSE) return;
 
         // If character to switch has suicide return
-        if (GameManager.currentGame._skilldata.CharacterSuicidedState((PlayableCharacters)indexEnum)) return;
+        if (PlayerSkills.GetSkill(PlayerSkills.SkillType.suicidio, GameManager.currentGame._skilldata).CharacterSuicidedState((PlayableCharacters)indexEnum)) return;
 
         // Toggle to normal mode
         SkillMan.NormalMode = false;

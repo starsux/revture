@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +20,7 @@ public class PlayerSkillsManager : MonoBehaviour
     private void Awake()
     {
         _GM = GameObject.FindGameObjectWithTag("MANAGER").GetComponent<GameRuntime>();
+        GameManager.currentGame._skilldata = Skills.ToList();
     }
 
     private void Start()
@@ -27,9 +30,10 @@ public class PlayerSkillsManager : MonoBehaviour
 
     public void UpdateSuicidedIcons()
     {
-        if (GameManager.currentGame._skilldata.CharactersSuicided())
+
+        if (PlayerSkills.GetSkill(PlayerSkills.SkillType.suicidio, GameManager.currentGame._skilldata).CharactersSuicided())
         {
-            foreach (var c in GameManager.currentGame._skilldata.characterSuicided)
+            foreach (var c in PlayerSkills.GetSkill(PlayerSkills.SkillType.suicidio, GameManager.currentGame._skilldata).characterSuicided)
             {
                 GetSuicideIcon(c).SetActive(false);
 
@@ -77,7 +81,7 @@ public class PlayerSkillsManager : MonoBehaviour
         switch (skill)
         {
             case PlayerSkills.SkillType.suicidio:
-                return GameManager.currentGame._skilldata.characterSuicided.Count == Enum.GetValues(typeof(PlayableCharacters)).Length - 1;
+                return PlayerSkills.GetSkill(PlayerSkills.SkillType.suicidio, GameManager.currentGame._skilldata).characterSuicided.Count == Enum.GetValues(typeof(PlayableCharacters)).Length - 1;
 
         }
 
@@ -241,12 +245,34 @@ public class PlayerSkills
 
     public SkillType skill_Type;
     public KeyCode KeyActivate;
-    public bool unlocked = true;
+    public bool unlocked = false;
     public float SkillDuration;
     public float RechargePowerTime;
     public float PowerMaxLimit;
     [HideInInspector] public float CurrentPowerQuant;
     public static PlayerSkills Current = null;
+
+    [HideInInspector] public List<PlayableCharacters> characterSuicided = new List<PlayableCharacters>();
+
+    /// <summary>
+    /// Check if a specific character has suicided
+    /// </summary>
+    /// <param name="c"></param>
+    /// <returns></returns>
+    internal bool CharacterSuicidedState(PlayableCharacters c)
+    {
+        return characterSuicided.Contains(c);
+
+    }
+
+    /// <summary>
+    /// Check if exists characters suicided
+    /// </summary>
+    /// <returns></returns>
+    internal bool CharactersSuicided()
+    {
+        return characterSuicided.Count > 0;
+    }
 
     internal static IEnumerable<PlayerSkills> filter(PlayerSkills[] skills, string v)
     {
@@ -264,5 +290,15 @@ public class PlayerSkills
 
         }
 
+    }
+
+    internal static PlayerSkills GetSkill(SkillType type, List<PlayerSkills> skilldata)
+    {
+        foreach(var sk in skilldata)
+        {
+            if(sk.skill_Type == type) return sk;
+        }
+
+        return null;
     }
 }

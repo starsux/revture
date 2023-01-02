@@ -202,8 +202,9 @@ public class RevtureGameData
     }
 
     #region data
-    // Essential skills unlocked level, 0 -> None
-    public int skills_level = 0;
+    public int SkillSlotsUnlocked = 0; // this includes power bar as 0
+    public bool MapUnlocked = false;
+    public bool InventoryUnlocked = false;
     // Unique id for every game stored
     public string GAME_ID;
     // Name selected by user
@@ -217,7 +218,15 @@ public class RevtureGameData
     // Most played character
     public PlayableCharacters MSPlayerCharacter;
     // Persistent data for skills
-    public SkillData _skilldata = new SkillData();
+    public List<PlayerSkills> _skilldata;
+
+    //public RevtureGameData()
+    //{
+    //    foreach(var i in Enum.GetNames(typeof(PlayableCharacters)))
+    //    {
+    //        _skilldata.Add();
+    //    }
+    //}
 
     // Last player position
     public Vector3 PlayerPosition;
@@ -229,30 +238,4 @@ public class RevtureGameData
     /// </summary>
     public StoryControlSys StoryControl = new StoryControlSys();
     #endregion
-}
-
-[Serializable]
-public class SkillData
-{
-    public List<PlayableCharacters> characterSuicided = new List<PlayableCharacters>();
-
-    /// <summary>
-    /// Check if a specific character has suicided
-    /// </summary>
-    /// <param name="c"></param>
-    /// <returns></returns>
-    internal bool CharacterSuicidedState(PlayableCharacters c)
-    {
-        return characterSuicided.Contains(c);
-
-    }
-
-    /// <summary>
-    /// Check if exists characters suicided
-    /// </summary>
-    /// <returns></returns>
-    internal bool CharactersSuicided()
-    {
-        return characterSuicided.Count > 0;
-    }
 }

@@ -342,6 +342,8 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/ActivateSkills.cs"
+"Assets/DialogTrigger.cs"
 "Assets/Scripts/Dialog.cs"
 "Assets/Scripts/DofEffect.cs"
 "Assets/Scripts/game/GameRuntime.cs"
@@ -358,6 +360,7 @@
 "Assets/Scripts/system/SplashScreen.cs"
 "Assets/Scripts/system/TS_Actions.cs"
 "Assets/Scripts/system/WaitScreen.cs"
+"Assets/Scripts/TitleSettings.cs"
 -langversion:9.0
 
 /deterministic

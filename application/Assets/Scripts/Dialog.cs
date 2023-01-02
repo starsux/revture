@@ -13,6 +13,9 @@ public class Dialog : MonoBehaviour
     public float WriteTime;
     public float DelayToHide;
     private bool _disposed = false;
+    public Animator anim;
+    public delegate void DelOnEndDialog();
+    public event DelOnEndDialog OnEndDialog;
 
     private void Start()
     {
@@ -79,7 +82,16 @@ public class Dialog : MonoBehaviour
     private IEnumerator DelayHide()
     {
         yield return new WaitForSeconds(DelayToHide);
+        // Run animation
+        anim.enabled = true;
+    }
+
+    public void EndAnimation()
+    {
         _disposed = false;
+        anim.enabled = false;
+
         this.gameObject.SetActive(false);
+        OnEndDialog?.Invoke();
     }
 }

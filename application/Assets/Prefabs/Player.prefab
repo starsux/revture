@@ -5097,7 +5097,7 @@ Transform:
   - {fileID: 2722317584175852765}
   - {fileID: 5799264135352734979}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2722317584442629445
 Rigidbody2D:
@@ -5186,25 +5186,28 @@ MonoBehaviour:
   Skills:
   - skill_Type: 1
     KeyActivate: 101
-    unlocked: 1
+    unlocked: 0
     SkillDuration: 5
     RechargePowerTime: 0
     PowerMaxLimit: 10
     CurrentPowerQuant: 0
+    characterSuicided: 
   - skill_Type: 2
     KeyActivate: 113
-    unlocked: 1
+    unlocked: 0
     SkillDuration: 1
     RechargePowerTime: 0
     PowerMaxLimit: 10
     CurrentPowerQuant: 0
+    characterSuicided: 
   - skill_Type: 4
     KeyActivate: 114
-    unlocked: 1
+    unlocked: 0
     SkillDuration: 3
     RechargePowerTime: 8
     PowerMaxLimit: 10
     CurrentPowerQuant: 0
+    characterSuicided: 
   - skill_Type: 3
     KeyActivate: 102
     unlocked: 0
@@ -5212,6 +5215,7 @@ MonoBehaviour:
     RechargePowerTime: 40
     PowerMaxLimit: 999
     CurrentPowerQuant: 0
+    characterSuicided: 
   NormalMode: 1
   _PM: {fileID: 2722317584442629443}
   PowerBar: {fileID: 0}

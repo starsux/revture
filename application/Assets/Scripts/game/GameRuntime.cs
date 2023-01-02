@@ -6,17 +6,25 @@ public class GameRuntime : MonoBehaviour
 {
     public GameObject player;
     public string SpritesFolderPath;
+    public GameObject PowerBarContainer;
     public Image PowerBar;
     public KeyCode KeyPause;
     public KeyCode KeyHelp;
     public KeyCode KeyMap;
     public KeyCode KeyInventory;
+    public KeyCode KeyExitSettings;
+    public GameObject SettingsUI;
     public GameObject HelpUI;
+    public GameObject InventoryUI;
+    public GameObject MiniMap;
+    public GameObject InventoryIcon;
     public Dialog _dg;
     public GameObject UIPause;
     private PlayerManager _pm;
     public static bool GLOBALPAUSE = false;
     public int TitleScreenScene;
+    public GameObject[] SkillSlots;
+    public GameObject[] HelpSlots;
 
     public GameObject Icon_arantia;
     public GameObject Icon_stenpek;
@@ -32,6 +40,7 @@ public class GameRuntime : MonoBehaviour
             // Set all playerparameters
             player.transform.position = GameManager.currentGame.PlayerPosition;
         }
+
 
     }
 
@@ -63,17 +72,42 @@ public class GameRuntime : MonoBehaviour
             }
 
             // Is player press KeyMap?
-            if (Input.GetKeyUp(KeyMap))
+            if (Input.GetKeyUp(KeyMap) && GameManager.currentGame.MapUnlocked)
             {
                 Debug.Log("Big  map");
             }
+
+
+            // Is player press KeyMap?
+            if (Input.GetKeyUp(KeyInventory) && GameManager.currentGame.InventoryUnlocked)
+            {
+                InventoryUI.SetActive(!InventoryUI.activeSelf);
+            }
+
+            MiniMap.SetActive(GameManager.currentGame.MapUnlocked);
+            InventoryIcon.SetActive(GameManager.currentGame.MapUnlocked);
+        }
+
+        PowerBarContainer.SetActive(GameManager.currentGame.SkillSlotsUnlocked > 0);
+
+        for (int i = 0; i < SkillSlots.Length; i++)
+        {
+            SkillSlots[i].SetActive(i < GameManager.currentGame.SkillSlotsUnlocked);
+            HelpSlots[i].SetActive(i < GameManager.currentGame.SkillSlotsUnlocked);
         }
 
 
         // Is player press Key pause?
-        if (Input.GetKeyUp(KeyPause))
+        if (Input.GetKeyUp(KeyPause) && !SettingsUI.activeSelf)
         {
             SetPause(!GLOBALPAUSE);
+        }
+
+        // Is player press exit key for settings?
+        if (Input.GetKeyUp(KeyExitSettings) && SettingsUI.activeSelf)
+        {
+            SettingsUI.SetActive(!SettingsUI.activeSelf);
+
         }
     }
 
@@ -96,7 +130,7 @@ public class GameRuntime : MonoBehaviour
 
     public void Settings()
     {
-        Debug.Log("Show settings game ui/scene");
+        SettingsUI.SetActive(!SettingsUI.activeSelf);
     }
 
 }
