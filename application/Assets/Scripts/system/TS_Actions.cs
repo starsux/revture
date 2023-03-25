@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class TS_Actions : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class TS_Actions : MonoBehaviour
     public GameObject UINEWGAME;
     public TMP_InputField Input_GameName;
     public int NameLimit;
+    public GameObject Initial_element_creation; // Initial elemtn of ui for create new game
+    public EventSystem es;
 
     private void Start()
     {
@@ -123,6 +126,27 @@ public class TS_Actions : MonoBehaviour
     {
         // show title and buttons
         Buttons.SetActive(initial_ui);
+
+        if (initial_ui)
+        {
+            es.SetSelectedGameObject(null);
+            if (ButtonContinue.activeSelf)
+            {
+                es.SetSelectedGameObject(ButtonContinue);
+
+            }
+            else
+            {
+                es.SetSelectedGameObject(ButtonStart);
+
+            }
+        }
+        else
+        {
+            es.SetSelectedGameObject(null);
+            es.SetSelectedGameObject(Initial_element_creation);
+
+        }
 
         // Hide ui for title game
         UINEWGAME.SetActive(!initial_ui); // show/hide canvas of new game creation

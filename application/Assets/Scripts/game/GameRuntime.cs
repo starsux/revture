@@ -98,7 +98,7 @@ public class GameRuntime : MonoBehaviour
 
 
         // Is player press Key pause?
-        if (Input.GetKeyUp(KeyPause) && !SettingsUI.activeSelf)
+        if (( Input.GetKeyUp("joystick 1 button 10") || Input.GetKeyUp(KeyPause)) && !SettingsUI.activeSelf)
         {
             SetPause(!GLOBALPAUSE);
         }

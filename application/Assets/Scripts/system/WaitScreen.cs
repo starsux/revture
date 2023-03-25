@@ -44,7 +44,7 @@ public class WaitScreen : MonoBehaviour
 
     private void Update()
     {
-        if (Input.anyKey)
+        if (Input.anyKeyDown)
         {
 
             UserSkip = true;
