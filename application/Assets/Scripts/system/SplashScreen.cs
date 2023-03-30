@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class SplashScreen : MonoBehaviour
 {
     public int NextScene;
-    private bool UserSkip;
 
     public string movie;
 
@@ -20,10 +19,12 @@ public class SplashScreen : MonoBehaviour
 
     private void Update()
     {
+        // Is user presss any key?
         if (Input.anyKeyDown)
         {
+            // Go to next scene
+            SceneManager.LoadScene(NextScene);
 
-            UserSkip = true;
         }
     }
 
